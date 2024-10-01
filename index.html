@@ -295,7 +295,7 @@
       <!--contact info start-->
       <div class="col-xs-12 col-sm-3 col-md-4 col-lg-4">
         <h4>Contact</h4>
-        <p> <i class="fa fa-envelope-o "></i> <a id="value_email" href="mailto:support@websitename.com">support@websitename.com</a></p>
+        <p> <i class="fa fa-envelope-o "></i> <a id="value_email" href="mailto:jetty.lee@icloud.com">jetty.lee@icloud.com</a></p>
         <p> <i class="fa fa-link "></i> <a id="value_website" href="www.websitename.com">www.websitename.com</a></p>
 <!--        <button class="btn btn-primary btn-lg" id="btn_generator">-->
 <!--            I want a resume too!-->
@@ -382,9 +382,9 @@ $(document).ready(function() {
         'contact'
     ]);
     var values = {
-        name: "Jetty Lee",
-        mission: "Coding For A Better World",
-        job_title: "FullStack Developer",
+        name: "Jetty Lee - 李小东",
+        mission: "Coding For A Better World|Enjoy the world!",
+        job_title: "FullStack Developer|Web3 Investor|",
         profile_pic: "images/jetty.jpeg",
         intro: "Hello, my name is Jetty Lee. I'm from Hunan and currently residing in Shenzhen since 2011. I've worked for renowned companies such as Huawei and Sina Lottery as a full-stack engineer. In 2017, I embarked on my entrepreneurial journey in the field of financial technology. I've developed virtual currency exchanges and contract exchanges, and served top securities firms like China Merchants Securities, Guosen Securities, and First Venture Securities. Currently, I'm focusing on selling FoxAI robots and customizing AI robots for specific tasks. Besides being a tech geek who loves his work, I also enjoy singing, running, playing basketball and badminton among other sports. As an individual with an ENFP personality type according to the MBTI test, I am enthusiastic about helping others and have even saved a child from drowning once! You can reach me via WeChat at szchainfun.My Email:jetty.lee@icloud.com,Twitter(X):jettylee",
         tech_skills: [
@@ -457,7 +457,9 @@ $(document).ready(function() {
             title: "",
             desc: ""
         }],
-        portfolio: [],
+        portfolio: [{
+
+        }],
         email: "jetty.lee@icloud.com",
         website: "jettylee.com",
         sns: [ {
@@ -495,8 +497,8 @@ $(document).ready(function() {
         if (values.portfolio.length > 0) {
             //TODO(zzn) update portfolio
         } else {
-            $("#portfolio").remove();
-            $("#menu_portfolio").remove();
+            // $("#portfolio").remove();
+            // $("#menu_portfolio").remove();
             stickUp([
                 'banner',
                 'aboutme',
