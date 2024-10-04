@@ -1,2 +1,5 @@
-# myresume
-我的个人简历网站
+Hello, I'm Jetty Lee. As an experienced full-stack engineer who once worked with renowned companies like Huawei and Sina Lottery, I possess strong programming capabilities accompanied with extensive industry knowledge. Currently, I prioritized on selling and customizing FoxAI robots - striving to build efficient AI customer service robot solutions for our clients.
+
+Beyond my profession, I'm also a person filled with curiosity and passion. I enjoy singing, running, playing basketball, and badminton. Furthermore, occasional table tennis, mountain climbing, and soccer with my friends add color to my life. In the meantime, I delight in exploring new insights and perspectives towards technology and business, which helps to broaden my horizons and sharpen my skills.
+
+I genuinely welcome discussions and connections in the field. If you have any questions or wish to delve into a certain topic, don't hesitate to contact me through my WeChat (szchainfun). Let's share the vibes of technology and ideas together! I'm looking forward to our mutual exchanges.
