@@ -1,644 +1,1024 @@
 <!DOCTYPE html>
-<!--[if lt IE 7 ]> <html class="ie ie6 no-js" lang="en"> <![endif]-->
-<!--[if IE 7 ]>    <html class="ie ie7 no-js" lang="en"> <![endif]-->
-<!--[if IE 8 ]>    <html class="ie ie8 no-js" lang="en"> <![endif]-->
-<!--[if IE 9 ]>    <html class="ie ie9 no-js" lang="en"> <![endif]-->
-<!--[if gt IE 9]><!--><html class="no-js" lang="en"><!--<![endif]--><head>
-<meta charset="UTF-8" />
-<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-<title>Jetty Lee's Resume</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<!--main style-->
-<link rel="stylesheet" type="text/css" media="screen" href="css/bootstrap.css">
-<link rel="stylesheet" type="text/css" media="screen" href="css/style.css">
-<!--google font style-->
-<link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,600,700,800,300' rel='stylesheet' type='text/css'>
-<!--font-family: 'Open Sans', sans-serif;-->
-<!-- font css style-->
-<link rel="stylesheet" href="css/font-awesome.css">
-<!--for slider style-->
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>李小东 Jetty Lee - 技术总监/产品经理</title>
+    <style>
+        :root {
+            --bg-primary: #0a0e27;
+            --bg-secondary: #151a35;
+            --bg-card: #1a1f3a;
+            --text-primary: #e0e0e0;
+            --text-secondary: #a0a0a0;
+            --accent-color: #00d9ff;
+            --accent-glow: rgba(0, 217, 255, 0.3);
+            --border-color: #2a2f4a;
+            --success-color: #00ff88;
+        }
 
-<noscript>
-<link rel="stylesheet" type="text/css" href="css/fallback.css" />
-</noscript>
-<!--[if lt IE 9]>
-			<link rel="stylesheet" type="text/css" href="css/fallback.css" />
-		<![endif]-->
-</head><body>
-<!--wrapper start-->
-<div class="wrapper" id="wrapper">
-  <header>
-    <!--banner start-->
-    <div class="banner row" id="banner">
-      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 noPadd" style="height:100%">
-        <!--background slide show start-->
-        <div class="bannerPart"> <img src="images/1.jpg" alt="" class="bannerImg"> </div>
-        <!--background slide show end-->
-      </div>
-    </div>
-    <!--banner end-->
-    <div class="bannerText container">
-      <h1 id="value_title">I'm Jetty Lee</h1>
-      <h2 id="value_mission">Design & Build Software in China</h2>
-    </div>
-    <!--menu start-->
-    <div class="menu">
-      <div class="navbar-wrapper">
-        <div class="container">
-          <div class="navwrapper">
-            <div class="navbar navbar-inverse navbar-static-top">
-              <div class="container">
-                <div class="navbar-header">
-                  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
-                  <a class="navbar-brand" href="#">Menu</a> </div>
-                <div class="navbar-collapse collapse">
-                  <ul class="nav navbar-nav">
-                    <li class="menuItem active"><a href="#wrapper">Home</a></li>
-                    <li class="menuItem"><a href="#aboutme">About</a></li>
-                    <li class="menuItem"><a href="#technical">Skills</a></li>
-                    <li class="menuItem"><a href="#exprience">Experience</a></li>
-                    <li class="menuItem"><a href="#education">Education</a></li>
-                    <li class="menuItem" id="menu_portfolio"><a href="#portfolio">Portfolio</a></li>
-                    <li class="menuItem"><a href="#contact">Contact</a></li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- End Navbar -->
-        </div>
-      </div>
-    </div>
-    <!--menu end-->
-  </header>
-  <!--about me start-->
-  <section class="aboutme" id="aboutme">
-    <div class="container">
-      <div class="heading">
-        <h2>About me</h2>
-        <p>A small introduction about my self</p>
-      </div>
-      <div class="row">
-        <div class=" col-xs-12 col-sm-12 col-md-7 col-lg-7">
-          <h3 id="value_aboutme_name">Jetty Lee</h3>
-          <h4 class="subHeading" id="value_aboutme_job_title">Webdesigner & Web Developer from China</h4>
-          <span id="value_aboutme_intro">
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat.  cillum dolore eu fugiat nulla pariatur. olore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
-          <p>nulla pariatur.uis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. olore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
-          </span>
-          <a href="javascript:alert('Sorry, printable resume is not ready yet!')" class="bntDownload">Download Printable Resume</a> </div>
-        <div class=" col-xs-12 col-sm-12 col-md-4 col-lg-4 col-md-offset-1 col-lg-offset-1 proPic">
-            <div id='value_aboutme_profile_pic' style='background-image:url(images/me.jpg)' class="img-circle topmar"></div>
-            <!--<img id="value_aboutme_profile_pic" src="images/me.jpg" alt="" class="img-circle topmar">-->
-        </div>
-      </div>
-    </div>
-  </section>
-  <!--about me end-->
-  <!--technical start-->
-  <section class="technical" id="technical">
-    <div class="container">
-      <div class="heading">
-        <h2>Technical Skills</h2>
-        <p>I can say i’m quite good at</p>
-      </div>
-      <div class="row" id="value_skill_parent">
-        <div class=" col-xs-12 col-sm-4 col-md-4 col-lg-4 skillsArea" id="value_skill_child">
-          <div class=" col-xs-12 col-sm-6 col-md-6 col-lg-6 skills">
-              <span class="chart skilBg" data-percent="90"> <span class="percent"></span> </span>
-            <h4>Photoshop</h4>
-            <p>Donec accumsan ligula vitae mag na curabitur id</p>
-          </div>
-        </div>
-        <div class=" col-xs-12 col-sm-4 col-md-4 col-lg-4 skillsArea">
-          <div class=" col-xs-12 col-sm-6 col-md-6 col-lg-6 skills"> <span class="chart skilBg" data-percent="80"> <span class="percent"></span> </span>
-            <h4>Illustrator</h4>
-            <p>Donec accumsan ligula vitae mag na curabitur id</p>
-          </div>
-        </div>
-        <div class=" col-xs-12 col-sm-4 col-md-4 col-lg-4 skillsArea">
-          <div class=" col-xs-12 col-sm-6 col-md-6 col-lg-6 skills"> <span class="chart skilBg" data-percent="80"> <span class="percent"></span> </span>
-            <h4>Flash</h4>
-            <p>Donec accumsan ligula vitae mag na curabitur id</p>
-          </div>
-        </div>
-        <div class=" col-xs-12 col-sm-4 col-md-4 col-lg-4 skillsArea">
-          <div class=" col-xs-12 col-sm-6 col-md-6 col-lg-6 skills"> <span class="chart skilBg" data-percent="75"> <span class="percent"></span> </span>
-            <h4>HTML5 / CSS3</h4>
-            <p>Donec accumsan ligula vitae mag na curabitur id</p>
-          </div>
-        </div>
-        <div class=" col-xs-12 col-sm-4 col-md-4 col-lg-4 skillsArea">
-          <div class=" col-xs-12 col-sm-6 col-md-6 col-lg-6 skills"> <span class="chart skilBg" data-percent="60"> <span class="percent"></span> </span>
-            <h4>jQuery</h4>
-            <p>Donec accumsan ligula vitae mag na curabitur id</p>
-          </div>
-        </div>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-      </div>
-    </div>
-  </section>
-  <!--technical end-->
-  <!--exprience start-->
-  <section class="exprience" id="exprience">
-    <div class="container">
-      <div class="heading">
-        <h2>Work Experience</h2>
-        <p>My previous associations</p>
-      </div>
-      <div id="value_experience_parent">
-      <div class="row workDetails" id="value_experience_child">
-        <div class="col-xs-12 col-sm-3 col-md-2 col-lg-2">
-          <div class="workYear">Mar,2011<br>
-            Present</div>
-        </div>
-        <div class="col-xs-12 col-sm-9 col-md-10 col-lg-10 rightArea">
-          <div class="arrowpart"></div>
-          <div class="exCon">
-            <h4>UIzards</h4>
-            <h5>Senior UX Designer</h5>
-            <p>Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quom placerat facer possim assum. Typi non habent claritatem insitam; est usus legentis in iis qui faorum claritatem. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius.</p>
-          </div>
-        </div>
-      </div>
-      <div class="row workDetails">
-        <div class="col-xs-12 col-sm-3 col-md-2 col-lg-2">
-          <div class="workYear">Mar,2011<br>
-            Present</div>
-        </div>
-        <div class="col-xs-12 col-sm-9 col-md-10 col-lg-10 rightArea">
-          <div class="arrowpart"></div>
-          <div class="exCon">
-            <h4>Lexind</h4>
-            <h5>Visual / UI Designer</h5>
-            <p>Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quom placerat facer possim assum. Typi non habent claritatem insitam; est usus legentis in iis qui faorum claritatem. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius.</p>
-          </div>
-        </div>
-      </div>
-      <div class="row workDetails">
-        <div class="col-xs-12 col-sm-3 col-md-2 col-lg-2">
-          <div class="workYear">Mar,2011<br>
-            Present</div>
-        </div>
-        <div class="col-xs-12 col-sm-9 col-md-10 col-lg-10 rightArea">
-          <div class="arrowpart"></div>
-          <div class="exCon">
-            <h4>Matrix Media</h4>
-            <h5>Visual / UI Designer</h5>
-            <p>Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quom placerat facer possim assum. Typi non habent claritatem insitam; est usus legentis in iis qui faorum claritatem. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius.</p>
-          </div>
-        </div>
-      </div>
-      </div>
-    </div>
-  </section>
-  <!--exprience end-->
-  <!--education start-->
-  <section class="education" id="education">
-    <div class="container">
-      <div class="heading">
-        <h2>Education & Diplomas</h2>
-        <p>What I have done in my academic career</p>
-      </div>
-      <div id="value_education_parent">
-      <div class="row workDetails" id="value_education_child">
-        <div class="col-xs-12 col-sm-3 col-md-2 col-lg-2">
-          <div class="workYear">Mar,2010</div>
-        </div>
-        <div class="col-xs-12 col-sm-9 col-md-10 col-lg-10 rightArea">
-          <div class="arrowpart"></div>
-          <div class="exCon">
-            <h4>Master Degree of Design</h4>
-            <h5>University of Design</h5>
-            <p>Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quom placerat facer possim assum. Typi non habent claritatem insitam; est usus legentis in iis qui faorum claritatem. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius.</p>
-          </div>
-        </div>
-      </div>
-      <div class="row workDetails">
-        <div class="col-xs-12 col-sm-3 col-md-2 col-lg-2">
-          <div class="workYear">Sept, 2007</div>
-        </div>
-        <div class="col-xs-12 col-sm-9 col-md-10 col-lg-10 rightArea">
-          <div class="arrowpart"></div>
-          <div class="exCon">
-            <h4>Bachelor of Arts</h4>
-            <h5>University of Design</h5>
-            <p>Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quom placerat facer possim assum. Typi non habent claritatem insitam; est usus legentis in iis qui faorum claritatem. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius.</p>
-          </div>
-        </div>
-      </div>
-      <div class="row workDetails">
-        <div class="col-xs-12 col-sm-3 col-md-2 col-lg-2">
-          <div class="workYear">Feb, 2005</div>
-        </div>
-        <div class="col-xs-12 col-sm-9 col-md-10 col-lg-10 rightArea">
-          <div class="arrowpart"></div>
-          <div class="exCon">
-            <h4>Master Degree of Design</h4>
-            <h5>University of Design</h5>
-            <p>Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quom placerat facer possim assum. Typi non habent claritatem insitam; est usus legentis in iis qui faorum claritatem. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius.</p>
-          </div>
-        </div>
-      </div>
-      </div>
-    </div>
-  </section>
-  <!--education end-->
-  <!--portfolio start-->
-  <section class="portfolio" id="portfolio">
-    <div class="container">
-      <div class="heading">
-        <h2>Portfolio</h2>
-        <p>showcase of my latest works</p>
-      </div>
-      <div class="portfolioFilter">
-        <ul>
-          <li><a href="#" data-filter="*" class="current">All</a></li>
-          <li><a href="#" data-filter=".photos">Photos</a></li>
-          <li><a href="#" data-filter=".branding">Branding</a></li>
-          <li><a href="#" data-filter=".illustration">Illustration</a></li>
-        </ul>
-      </div>
-      <ul class="portfolioContainer row">
-        <li class="photos col-xs-6 col-sm-4 col-md-3 col-lg-3">
-          <div class="lightCon"> <span class="hoverBox"> <span class="smallIcon"> <a rel="lightbox-demo" href="images/big-1.jpg" title="Project Title1" class="zoom lb lb_warsaw1"><i class="fa fa-search fa-2x"></i></a> <a href="#" title="Project Link" target="_blank" class="linKed"><i class="fa fa-link fa-2x"></i></i></a> </span> </span> <img src="images/thu-1.jpg" alt=""  > </div>
-        </li>
-        <li class="branding illustration col-xs-6 col-sm-4 col-md-3 col-lg-3">
-          <div class="lightCon"> <span class="hoverBox"> <span class="smallIcon"> <a rel="lightbox-demo" href="images/big-2.jpg" title="Project Title2" class="zoom lb lb_warsaw1"><i class="fa fa-search fa-2x"></i></a> <a href="#" title="Project Link" target="_blank" class="linKed"><i class="fa fa-link fa-2x"></i></i></a> </span> </span> <img src="images/thu-2.jpg" alt="" > </div>
-        </li>
-        <li class="illustration col-xs-6 col-sm-4 col-md-3 col-lg-3">
-          <div class="lightCon"> <span class="hoverBox"> <span class="smallIcon"> <a rel="lightbox-demo" href="images/big-3.jpg" title="Project Title3" class="zoom lb lb_warsaw1"><i class="fa fa-search fa-2x"></i></a> <a href="#" title="Project Link" target="_blank" class="linKed"><i class="fa fa-link fa-2x"></i></i></a> </span> </span> <img src="images/thu-3.jpg" alt="" > </div>
-        </li>
-        <li class="branding illustration col-xs-6 col-sm-4 col-md-3 col-lg-3">
-          <div class="lightCon"> <span class="hoverBox"> <span class="smallIcon"> <a rel="lightbox-demo" href="images/big-4.jpg" title="Project Title4" class="zoom lb lb_warsaw1"><i class="fa fa-search fa-2x"></i></a> <a href="#" title="Project Link" target="_blank" class="linKed"><i class="fa fa-link fa-2x"></i></i></a> </span> </span> <img src="images/thu-4.jpg" alt="" > </div>
-        </li>
-        <li class="illustration photos col-xs-6 col-sm-4 col-md-3 col-lg-3">
-          <div class="lightCon"> <span class="hoverBox"> <span class="smallIcon"> <a rel="lightbox-demo" href="images/big-5.jpg" title="Project Title5" class="zoom lb lb_warsaw1"><i class="fa fa-search fa-2x"></i></a> <a href="#" title="Project Link" target="_blank" class="linKed"><i class="fa fa-link fa-2x"></i></i></a> </span> </span> <img src="images/thu-5.jpg" alt="" > </div>
-        </li>
-        <li class="branding photos col-xs-6 col-sm-4 col-md-3 col-lg-3">
-          <div class="lightCon"> <span class="hoverBox"> <span class="smallIcon"> <a rel="lightbox-demo" href="images/big-6.jpg" title="Project Title6" class="zoom lb lb_warsaw1"><i class="fa fa-search fa-2x"></i></a> <a href="#" title="Project Link" target="_blank" class="linKed"><i class="fa fa-link fa-2x"></i></i></a> </span> </span> <img src="images/thu-6.jpg" alt="" > </div>
-        </li>
-        <li class="illustration photos col-xs-6 col-sm-4 col-md-3 col-lg-3">
-          <div class="lightCon"> <span class="hoverBox"> <span class="smallIcon"> <a rel="lightbox-demo" href="images/big-7.jpg" title="Project Title7" class="zoom lb lb_warsaw1"><i class="fa fa-search fa-2x"></i></a> <a href="#" title="Project Link" target="_blank" class="linKed"><i class="fa fa-link fa-2x"></i></i></a> </span> </span> <img src="images/thu-7.jpg" alt="" > </div>
-        </li>
-        <li class="branding col-xs-6 col-sm-4 col-md-3 col-lg-3">
-          <div class="lightCon"> <span class="hoverBox"> <span class="smallIcon"> <a rel="lightbox-demo" href="images/big-8.jpg" title="Project Title8" class="zoom lb lb_warsaw1"><i class="fa fa-search fa-2x"></i></a> <a href="#" title="Project Link" target="_blank" class="linKed"><i class="fa fa-link fa-2x"></i></i></a> </span> </span> <img src="images/thu-8.jpg" alt="" > </div>
-        </li>
-      </ul>
-    </div>
-  </section>
-  <!--portfolio end-->
-  <!--contact start-->
+        body {
+            font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
 
-  <section class="contactDetails" id="contact">
-    <div class="container">
-      <!--contact info start-->
-      <div class="col-xs-12 col-sm-3 col-md-4 col-lg-4">
-        <h4>Contact</h4>
-        <p> <i class="fa fa-envelope-o "></i> <a id="value_email" href="mailto:jetty.lee@icloud.com">jetty.lee@icloud.com</a></p>
-        <p> <i class="fa fa-link "></i> <a id="value_website" href="www.websitename.com">www.websitename.com</a></p>
-        <p> <i class="fa fa-link "></i> <a id="wechat" href="javascript:copyToClipboard('szchainfun')">WeChat:szchainfun</a></p>
-<!--        <button class="btn btn-primary btn-lg" id="btn_generator">-->
-<!--            I want a resume too!-->
-<!--        </button>-->
+        /* Matrix Rain Background Effect */
+        #matrix-canvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+            opacity: 0.15;
+        }
 
-      </div>
-      <!--contact info end-->
-    </div>
-  </section>
-  <!--contact end-->
-  <!--footer start-->
-  <section class="footer" id="footer">
-    <div class="container">
-      <ul id="value_sns_parent">
-        <li id="value_sns_child"><a href="#"><i class="fa fa-twitter fa-2x"></i></a></li>
-        <li><a href="#"><i class="fa fa-facebook fa-2x"></i></a></li>
-        <li><a href="#"><i class="fa fa-linkedin fa-2x"></i></a></li>
-        <li><a href="#"><i class="fa fa-pinterest fa-2x"></i></a></li>
-        <li><a href="#"><i class="fa fa-dribbble fa-2x"></i></a></li>
-        <li><a href="#"><i class="fa fa-rss fa-2x"></i></a></li>
-      </ul>
-    </div>
-  </section>
-  <!--footer end-->
-</div>
+        .container {
+            position: relative;
+            z-index: 1;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
 
-<!-- Modal -->
-<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-                <h4 class="modal-title" id="myModalLabel">Resume Generator</h4>
-            </div>
-            <div class="modal-body">
-                <form class="form-horizontal" role="form">
-                    <div class="form-group">
-                        <div class="col-sm-12   ">
-                        <textarea id="input_values_json"  class="form-control " rows="20" wrap="soft"></textarea>
-                        </div>
-                    </div>
+        /* Header Section */
+        .header {
+            background: var(--bg-secondary);
+            border: 2px solid var(--border-color);
+            border-radius: 10px;
+            padding: 40px;
+            margin-bottom: 30px;
+            position: relative;
+            overflow: hidden;
+        }
 
-                </form>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-primary" id="btn_save" data-dismiss="modal">Save</button>
-                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-            </div>
-        </div>
-    </div>
-</div>
-<!--wrapper end-->
-<!--modernizr js-->
-<script type="text/javascript" src="js/modernizr.custom.26633.js"></script>
-<!--jquary min js-->
-<script type="text/javascript" src="js/jquery.min.js"></script>
-<script src="js/bootstrap.js"></script>
-<script type="text/javascript" src="js/jquery.gridrotator.js"></script>
-<!--for custom jquary-->
-<script src="js/custom.js"></script>
-<!--for placeholder jquary-->
-<script type="text/javascript" src="js/jquery.placeholder.js"></script>
-<!--for menu jquary-->
-<script type="text/javascript" src="js/stickUp.js"></script>
-<script type="text/javascript">
-jQuery(function($) {
-$(document).ready(function() {
-    //enabling stickUp on the '.navbar-wrapper' class
-    var stickUp  = function (parts) {
-        $('.navbar-wrapper').stickUp({
-            parts: parts,
-            itemClass: 'menuItem',
-            itemHover: 'active',
-            topMargin: 'auto'
-        });
-    };
-    stickUp([
-        'banner',
-        'aboutme',
-        'technical',
-        'exprience',
-        'education',
-        'portfolio',
-        'contact'
-    ]);
-    var values = {
-        name: "Jetty Lee - 李小东",
-        mission: "Coding For A Better World|Enjoy the world!",
-        job_title: "FullStack Developer|Web3 Investor|",
-        profile_pic: "images/jetty.jpeg",
-        intro: "Hello, my name is Jetty Lee. I'm from Hunan and currently residing in Shenzhen since 2011. I've worked for renowned companies such as Huawei and Sina Lottery as a full-stack engineer. In 2017, I embarked on my entrepreneurial journey in the field of financial technology. I've developed virtual currency exchanges and contract exchanges, and served top securities firms like China Merchants Securities, Guosen Securities, and First Venture Securities. Currently, I'm focusing on selling FoxAI robots and customizing AI robots for specific tasks. Besides being a tech geek who loves his work, I also enjoy singing, running, playing basketball and badminton among other sports. As an individual with an ENFP personality type according to the MBTI test, I am enthusiastic about helping others and have even saved a child from drowning once! You can reach me via WeChat at szchainfun.My Email:jetty.lee@icloud.com,Twitter(X):jettylee",
-        tech_skills: [
-            {
-                caption: "Java",
-                percentage: 95,
-                subcaption: "10+ Years"
-            },
-            {
-                caption: "Solidity",
-                percentage: 80,
-                subcaption: "5+ Years"
-            },
-            {
-                caption: "HTML5 / CSS3 / JS",
-                percentage: 95,
-                subcaption: "10+ Years"
-            },
-            {
-                caption: "C#",
-                percentage: 95,
-                subcaption: "2+ Years"
-            },
+        .header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: linear-gradient(90deg, var(--accent-color), var(--success-color));
+            animation: scan 3s linear infinite;
+        }
 
-            {
-                caption: "MySQL",
-                percentage: 90,
-                subcaption: ""
-            },
-          {
-            caption: "Python",
-            percentage: 80,
-            subcaption: ""
-          },
-            {
-                caption: "NodeJS",
-                percentage: 85,
-                subcaption: ""
+        @keyframes scan {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(100%); }
+        }
+
+        .header-content {
+            display: grid;
+            grid-template-columns: auto 1fr auto;
+            gap: 30px;
+            align-items: center;
+        }
+
+        .avatar {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 3px solid var(--accent-color);
+            box-shadow: 0 0 20px var(--accent-glow);
+            object-fit: cover;
+        }
+
+        .header-info h1 {
+            color: var(--accent-color);
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            text-shadow: 0 0 10px var(--accent-glow);
+        }
+
+        .header-info .subtitle {
+            color: var(--text-secondary);
+            font-size: 1.2em;
+            margin-bottom: 15px;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 15px;
+        }
+
+        .contact-item {
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            color: var(--text-secondary);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .contact-item:hover {
+            color: var(--accent-color);
+        }
+
+        .lang-switch {
+            background: var(--bg-card);
+            border: 2px solid var(--accent-color);
+            color: var(--accent-color);
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-family: inherit;
+            font-size: 1em;
+            transition: all 0.3s;
+        }
+
+        .lang-switch:hover {
+            background: var(--accent-color);
+            color: var(--bg-primary);
+            box-shadow: 0 0 15px var(--accent-glow);
+        }
+
+        /* Section Styles */
+        .section {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            border-radius: 10px;
+            padding: 30px;
+            margin-bottom: 30px;
+            position: relative;
+        }
+
+        .section-title {
+            color: var(--success-color);
+            font-size: 1.8em;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--border-color);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .section-title::before {
+            content: '>';
+            color: var(--accent-color);
+        }
+
+        /* Skills Grid */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .skill-item {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 15px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .skill-item::before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            height: 3px;
+            background: var(--accent-color);
+            width: var(--skill-percent, 0%);
+            transition: width 1s ease;
+        }
+
+        .skill-name {
+            color: var(--text-primary);
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .skill-level {
+            color: var(--text-secondary);
+            font-size: 0.9em;
+        }
+
+        /* Experience Timeline */
+        .timeline {
+            position: relative;
+            padding-left: 30px;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: var(--border-color);
+        }
+
+        .timeline-item {
+            position: relative;
+            padding-bottom: 30px;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -36px;
+            top: 5px;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: var(--accent-color);
+            box-shadow: 0 0 10px var(--accent-glow);
+        }
+
+        .timeline-date {
+            color: var(--accent-color);
+            font-size: 0.9em;
+            margin-bottom: 5px;
+        }
+
+        .timeline-company {
+            color: var(--text-primary);
+            font-size: 1.2em;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .timeline-position {
+            color: var(--success-color);
+            margin-bottom: 10px;
+        }
+
+        .timeline-description {
+            color: var(--text-secondary);
+            line-height: 1.8;
+        }
+
+        .timeline-description ul {
+            margin-left: 20px;
+            margin-top: 10px;
+        }
+
+        .timeline-description li {
+            margin-bottom: 5px;
+        }
+
+        /* Projects Grid */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .project-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 20px;
+            transition: all 0.3s;
+        }
+
+        .project-card:hover {
+            border-color: var(--accent-color);
+            box-shadow: 0 0 20px var(--accent-glow);
+            transform: translateY(-5px);
+        }
+
+        .project-title {
+            color: var(--accent-color);
+            font-size: 1.2em;
+            margin-bottom: 10px;
+        }
+
+        .project-period {
+            color: var(--text-secondary);
+            font-size: 0.9em;
+            margin-bottom: 15px;
+        }
+
+        .project-description {
+            color: var(--text-secondary);
+            line-height: 1.8;
+        }
+
+        /* Advantages List */
+        .advantages-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+        }
+
+        .advantage-item {
+            background: var(--bg-card);
+            border-left: 3px solid var(--accent-color);
+            padding: 15px;
+            border-radius: 5px;
+        }
+
+        .advantage-item::before {
+            content: '✓ ';
+            color: var(--success-color);
+            font-weight: bold;
+            margin-right: 5px;
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            padding: 30px;
+            color: var(--text-secondary);
+            border-top: 1px solid var(--border-color);
+        }
+
+        .terminal-prompt {
+            color: var(--success-color);
+            margin-right: 5px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .header-content {
+                grid-template-columns: 1fr;
+                text-align: center;
             }
-        ],
-        working_experience: [ {
-            start: "2017 - now",
-            end:"Present",
-            company: "Chain Fun Tech",
-            title: "CEO Research/Teaching Assistant",
-            desc: "foxai.tech"
-        }, {
-          start: "2016",
-          end: "2017",
-          company: "moguyun.com",
-          title: "Full Stack Developer",
-          desc: ""
-        }, {
-                start: "2013",
-                end: "2016",
-                company: "Sina AiCai",
-                title: "Java Software Engineer",
-                desc: "Java"
-        },{
-          start: "2011 - ",
-          end:"2013",
-          company: "HuaWei",
-          title: "Senior Java Engineer",
-          desc: "During my time at Huawei, I was responsible for the core development of information systems, handling complex issues, and leading the team in learning cutting-edge technologies. "
-        }],
-        education_experience: [{
-            start: "2014",
-            end:"2016",
-            company: "Shenzhen Institute of Information Technology",
-            title: "",
-            desc: ""
-        }],
-        portfolio: [{
 
-        }],
-        email: "jetty.lee@icloud.com",
-        website: "jettylee.com",
-        sns: [ {
-            url: "https://x.com/jettyleex",
-            icon_class: "fa-twitter"
-        },{
-            url: "https://github.com/lixiaodong",
-            icon_class: "fa-github"
-        }]
-    };
-    var applyValues = function(values) {
-        $("#value_title").text(values["name"]);
-        $("#value_mission").text(values["mission"]);
-        $("#value_aboutme_name").text(values["name"]);
-        $("#value_aboutme_job_title").text(values["job_title"]);
-        $("#value_aboutme_profile_pic").css('background-image', 'url("' + values["profile_pic"] + '")');
-        $("#value_aboutme_intro").empty();
-        $("#value_aboutme_intro").append("<p>" + values["intro"] + "</p>");
-        $("#value_email").text(values["email"]);
-        $("#value_email").attr("href", "mailto://" + values["email"]);
-        $("#value_website").text(values["website"]);
-        $("#value_website").attr("href", "http://" + values["website"]);
+            .avatar {
+                margin: 0 auto;
+            }
 
-        var skill_template = $("#value_skill_child").clone();
-        $("#value_skill_parent").empty();
-        for(var i=0; i<values.tech_skills.length; i++) {
-            var tech_skill = values.tech_skills[i];
-            skill_template.find("h4").text(tech_skill.caption);
-            skill_template.find(".skilBg").attr("data-percent", tech_skill.percentage);
-            skill_template.find("p").text(tech_skill.subcaption);
-            $("#value_skill_parent").append(skill_template);
-            skill_template = skill_template.clone();
+            .contact-info {
+                justify-content: center;
+            }
+
+            .header-info h1 {
+                font-size: 2em;
+            }
+
+            .skills-grid {
+                grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            }
+
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
         }
 
-        if (values.portfolio.length > 0) {
-            //TODO(zzn) update portfolio
-        } else {
-            // $("#portfolio").remove();
-            // $("#menu_portfolio").remove();
-            stickUp([
-                'banner',
-                'aboutme',
-                'technical',
-                'exprience',
-                'education',
-                'contact'
-            ]);
+        /* Loading Animation */
+        @keyframes blink {
+            0%, 50%, 100% { opacity: 1; }
+            25%, 75% { opacity: 0; }
         }
 
-        var experience_template  = $("#value_experience_child").clone();
-        $("#value_experience_parent").empty();
-        for(var i=0;i<values.working_experience.length;i++) {
-            var experience = values.working_experience[i];
-            experience_template.find(".workYear").html(experience.start + "<br>" + experience.end);
-            experience_template.find("h4").text(experience.company);
-            experience_template.find("h5").text(experience.title);
-            experience_template.find("p").text(experience.desc);
-            $("#value_experience_parent").append(experience_template);
-            experience_template = experience_template.clone();
+        .cursor {
+            animation: blink 1s infinite;
         }
+    </style>
+</head>
+<body>
+    <canvas id="matrix-canvas"></canvas>
+    
+    <div class="container">
+        <!-- Header Section -->
+        <header class="header">
+            <div class="header-content">
+                <img src="https://www.jettylee.com/images/jetty.jpeg" alt="Jetty Lee" class="avatar" id="avatar">
+                
+                <div class="header-info">
+                    <h1 id="name">李小东 <span style="color: var(--success-color);">Jetty Lee</span></h1>
+                    <div class="subtitle" id="position">交易所CTO | 香港区块链协会副会长 | AI+Web3 技术专家</div>
+                    
+                    <div class="contact-info">
+                        <a href="mailto:jetty.lee@icloud.com" class="contact-item">
+                            <span>📧</span> jetty.lee@icloud.com
+                        </a>
+                        <a href="https://x.com/jettyleex" target="_blank" class="contact-item">
+                            <span>𝕏</span> @jettyleex
+                        </a>
+                        <a href="https://github.com/lixiaodong" target="_blank" class="contact-item">
+                            <span>💻</span> GitHub
+                        </a>
+                        <span class="contact-item">
+                            <span>💬</span> WeChat: szchainfun
+                        </span>
+                        <span class="contact-item">
+                            <span>📍</span> <span id="location">深圳，中国</span>
+                        </span>
+                    </div>
+                </div>
+                
+                <button class="lang-switch" onclick="toggleLanguage()">
+                    <span id="lang-text">EN</span>
+                </button>
+            </div>
+        </header>
 
-        var education_template  = $("#value_education_child").clone();
-        $("#value_education_parent").empty();
-        for(var i=0;i<values.education_experience.length;i++) {
-            var education = values.education_experience[i];
-            education_template.find(".workYear").html(education.start + "<br>" + education.end);
-            education_template.find("h4").text(education.company);
-            education_template.find("h5").text(education.title);
-            education_template.find("p").text(education.desc);
-            $("#value_education_parent").append(education_template);
-            education_template = education_template.clone();
-        }
+        <!-- About Section -->
+        <section class="section">
+            <h2 class="section-title" id="about-title">关于我</h2>
+            <p id="about-content" style="color: var(--text-secondary); line-height: 1.8;">
+                你好，我是李小东（Jetty Lee），来自湖南，2011年起定居深圳。我在华为、新浪彩票等知名公司担任全栈工程师，拥有12年的工作经验。2017年，我开始在金融科技和区块链领域创业，开发过日交易量过亿的虚拟货币交易所和合约交易所，服务过招商证券、国信证券、第一创业证券等顶级券商。目前担任某交易所CTO，专注于AI+Web3技术研究与应用，包括交易所核心技术（钱包系统、撮合引擎）、链上交易、链上数据追踪等领域。同时担任香港区块链协会副会长，推动行业技术标准和生态建设。我还带领团队销售FoxAI机器人并提供AI定制化解决方案。除了热爱技术，我还喜欢唱歌、跑步、打篮球和羽毛球。MBTI测试显示我是ENFP人格，热衷于帮助他人。具备良好的英语工作交流能力。
+            </p>
+        </section>
 
-        var sns_template = $("#value_sns_child").clone();
+        <!-- Personal Advantages Section -->
+        <section class="section">
+            <h2 class="section-title" id="advantages-title">个人优势</h2>
+            <div class="advantages-list">
+                <div class="advantage-item" data-zh="12年的全栈开发经验" data-en="12+ years full-stack development experience">12年的全栈开发经验</div>
+                <div class="advantage-item" data-zh="担任香港区块链协会副会长" data-en="Vice President of Hong Kong Blockchain Association">担任香港区块链协会副会长</div>
+                <div class="advantage-item" data-zh="交易所CTO，精通核心技术架构" data-en="Exchange CTO, expert in core tech architecture">交易所CTO，精通核心技术架构</div>
+                <div class="advantage-item" data-zh="AI+Web3技术深度研究与实践" data-en="Deep research in AI+Web3 technology">AI+Web3技术深度研究与实践</div>
+                <div class="advantage-item" data-zh="精通交易所钱包系统和撮合引擎" data-en="Expert in exchange wallet & matching engine">精通交易所钱包系统和撮合引擎</div>
+                <div class="advantage-item" data-zh="熟悉链上交易和数据追踪技术" data-en="Proficient in on-chain trading & data tracking">熟悉链上交易和数据追踪技术</div>
+                <div class="advantage-item" data-zh="设计过日交易量过亿的交易所" data-en="Designed exchange with 100M+ daily volume">设计过日交易量过亿的交易所</div>
+                <div class="advantage-item" data-zh="从0-1组建技术团队经验" data-en="Built tech teams from scratch">从0-1组建技术团队经验</div>
+                <div class="advantage-item" data-zh="5年技术团队管理经验" data-en="5 years tech team management">5年技术团队管理经验</div>
+                <div class="advantage-item" data-zh="具备英语工作交流能力" data-en="English working proficiency">具备英语工作交流能力</div>
+                <div class="advantage-item" data-zh="优秀的团队协作和沟通能力" data-en="Excellent team collaboration">优秀的团队协作和沟通能力</div>
+            </div>
+        </section>
 
-        $("#value_sns_parent").empty();
-        for(var i=0;i<values.sns.length;i++) {
-            var sns = values.sns[i];
-            sns_template.find("a").attr("href", sns.url);
-            sns_template.find(".fa").removeClass().addClass("fa fa-2x").addClass(sns.icon_class);
+        <!-- Technical Skills Section -->
+        <section class="section">
+            <h2 class="section-title" id="skills-title">技术技能</h2>
+            <div class="skills-grid">
+                <div class="skill-item" style="--skill-percent: 95%">
+                    <div class="skill-name">Java</div>
+                    <div class="skill-level">95% | 10+ <span id="years">年</span></div>
+                </div>
+                <div class="skill-item" style="--skill-percent: 95%">
+                    <div class="skill-name">HTML/CSS/JS</div>
+                    <div class="skill-level">95% | 10+ <span id="years2">年</span></div>
+                </div>
+                <div class="skill-item" style="--skill-percent: 90%">
+                    <div class="skill-name">MySQL</div>
+                    <div class="skill-level">90%</div>
+                </div>
+                <div class="skill-item" style="--skill-percent: 85%">
+                    <div class="skill-name">NodeJS</div>
+                    <div class="skill-level">85%</div>
+                </div>
+                <div class="skill-item" style="--skill-percent: 90%">
+                    <div class="skill-name">Solidity</div>
+                    <div class="skill-level">90% | 5+ <span id="years3">年</span></div>
+                </div>
+                <div class="skill-item" style="--skill-percent: 85%">
+                    <div class="skill-name">Python</div>
+                    <div class="skill-level">85%</div>
+                </div>
+                <div class="skill-item" style="--skill-percent: 95%">
+                    <div class="skill-name">C#</div>
+                    <div class="skill-level">95% | 2+ <span id="years4">年</span></div>
+                </div>
+                <div class="skill-item" style="--skill-percent: 90%">
+                    <div class="skill-name">Web3</div>
+                    <div class="skill-level">90%</div>
+                </div>
+                <div class="skill-item" style="--skill-percent: 88%">
+                    <div class="skill-name" data-zh="交易所撮合引擎" data-en="Matching Engine">交易所撮合引擎</div>
+                    <div class="skill-level">88%</div>
+                </div>
+                <div class="skill-item" style="--skill-percent: 90%">
+                    <div class="skill-name" data-zh="钱包系统" data-en="Wallet System">钱包系统</div>
+                    <div class="skill-level">90%</div>
+                </div>
+                <div class="skill-item" style="--skill-percent: 85%">
+                    <div class="skill-name" data-zh="链上数据追踪" data-en="On-chain Tracking">链上数据追踪</div>
+                    <div class="skill-level">85%</div>
+                </div>
+                <div class="skill-item" style="--skill-percent: 82%">
+                    <div class="skill-name">AI/LLM</div>
+                    <div class="skill-level">82%</div>
+                </div>
+            </div>
+        </section>
 
-            $("#value_sns_parent").append(sns_template);
-            sns_template = sns_template.clone();
-        }
-    };
+        <!-- Work Experience Section -->
+        <section class="section">
+            <h2 class="section-title" id="experience-title">工作经历</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-date">2024.01 - <span id="present0">至今</span></div>
+                    <div class="timeline-company" data-zh="某知名交易所" data-en="Leading Cryptocurrency Exchange">某知名交易所</div>
+                    <div class="timeline-position" data-zh="首席技术官 (CTO)" data-en="Chief Technology Officer (CTO)">首席技术官 (CTO)</div>
+                    <div class="timeline-description">
+                        <ul id="exp0-list">
+                            <li>担任交易所首席技术官，负责整体技术架构设计和团队管理</li>
+                            <li>主导交易所核心系统开发：钱包系统、高性能撮合引擎、风控系统</li>
+                            <li>深度研究AI+Web3技术融合，推动智能化交易系统建设</li>
+                            <li>负责链上交易监控、数据追踪和安全防护体系搭建</li>
+                            <li>带领团队开发FoxAI机器人，提供AI定制化解决方案</li>
+                            <li><strong style="color: var(--success-color);">成就：</strong>建立完整的交易所技术体系，实现高并发、高可用、高安全性的核心交易系统</li>
+                        </ul>
+                    </div>
+                </div>
 
-    applyValues(values);
-    var fillModalWithValues = function(values) {
-        $("#input_values_json").val(JSON.stringify(values, null, 4));
-    };
+                <div class="timeline-item">
+                    <div class="timeline-date">2023.06 - <span id="present_hkba">至今</span></div>
+                    <div class="timeline-company" data-zh="香港区块链协会" data-en="Hong Kong Blockchain Association">香港区块链协会</div>
+                    <div class="timeline-position" data-zh="副会长" data-en="Vice President">副会长</div>
+                    <div class="timeline-description">
+                        <ul id="exp-hkba-list">
+                            <li>担任香港区块链协会副会长，推动区块链行业发展</li>
+                            <li>参与制定行业技术标准和最佳实践规范</li>
+                            <li>组织技术交流活动，促进行业生态建设</li>
+                            <li>推动Web3技术在实际场景中的应用落地</li>
+                            <li>协会官网：<a href="https://hongkongblockchain.org/" target="_blank" style="color: var(--accent-color);">https://hongkongblockchain.org/</a></li>
+                        </ul>
+                    </div>
+                </div>
 
-    $("#btn_generator").click(function() {
-        fillModalWithValues(values);
-        $('#myModal').modal();
-    });
+                <div class="timeline-item">
+                    <div class="timeline-date">2017.05 - 2024.01</div>
+                    <div class="timeline-company" data-zh="深圳市链方科技有限公司 / [新加坡公司]vuebi" data-en="Chain Fun Tech / vuebi [Singapore]">深圳市链方科技有限公司 / [新加坡公司]vuebi</div>
+                    <div class="timeline-position" data-zh="产品总监/VP" data-en="Product Director/VP">产品总监/VP</div>
+                    <div class="timeline-description">
+                        <ul id="exp1-list">
+                            <li>主要负责产品需求，从分析到落地实现</li>
+                            <li>识别伪需求，并给出执行方案</li>
+                            <li>做用户行为分析，数据分析，从数据中找出商机</li>
+                            <li>金融产品经验居多，对金融行业敏感</li>
+                            <li>负责与券商客户沟通需求，协调人力</li>
+                            <li><strong style="color: var(--success-color);">成就：</strong>谈下华南理工大学、第一创业证券等多个订单，开发华泰证券、安信证券、中信建投等多个项目</li>
+                        </ul>
+                    </div>
+                </div>
 
-    $("#btn_save").click(function() {
-        values = $.parseJSON($("#input_values_json").val());
-        applyValues(values);
-    });
+                <div class="timeline-item">
+                    <div class="timeline-date">2016.06 - 2017.05</div>
+                    <div class="timeline-company" data-zh="深圳市蘑菇财富技术有限公司" data-en="Shenzhen Moguyun Technology">深圳市蘑菇财富技术有限公司</div>
+                    <div class="timeline-position" data-zh="技术总监" data-en="CTO">技术总监</div>
+                    <div class="timeline-description">
+                        <ul id="exp2-list">
+                            <li>负责前端用户体验</li>
+                            <li>前端技术研究</li>
+                            <li>游戏化产品开发</li>
+                            <li>多券商产品开发</li>
+                            <li><strong style="color: var(--success-color);">成就：</strong>2016年5月游戏化模拟炒股上线，开发招商证券、国信证券、银河证券等多个模拟炒股系统</li>
+                        </ul>
+                    </div>
+                </div>
 
-    // Hide w3counter tracking
-    var tid = setInterval(function() {
-        if ($("a[href='http://www.w3counter.com']")) {
-            $("a[href='http://www.w3counter.com']").hide();
-            clearInterval(tid);
-        }
-    }, 2000);
-});
+                <div class="timeline-item">
+                    <div class="timeline-date">2012.12 - 2016.05</div>
+                    <div class="timeline-company" data-zh="新浪爱彩" data-en="Sina AiCai">新浪爱彩</div>
+                    <div class="timeline-position" data-zh="Java开发工程师" data-en="Java Software Engineer">Java开发工程师</div>
+                    <div class="timeline-description">
+                        <ul id="exp3-list">
+                            <li>负责资讯系统核心开发</li>
+                            <li>处理疑难杂症</li>
+                            <li>带领小组学习前沿技术</li>
+                            <li><strong style="color: var(--success-color);">成就：</strong>带领团队打造新浪彩票资讯频道</li>
+                        </ul>
+                    </div>
+                </div>
 
-$( ".navbar.navbar-inverse.navbar-static-top a" ).click(function() {
-  $( ".navbar-collapse" ).addClass( "hideClass" );
-});
+                <div class="timeline-item">
+                    <div class="timeline-date">2011.04 - 2012.12</div>
+                    <div class="timeline-company" data-zh="华为（软通动力）" data-en="Huawei (via iSoftStone)">华为（软通动力）</div>
+                    <div class="timeline-position" data-zh="高级Java工程师" data-en="Senior Java Engineer">高级Java工程师</div>
+                    <div class="timeline-description">
+                        <ul id="exp4-list">
+                            <li>数据库设计，前后端开发</li>
+                            <li>调研新技术在项目中的可行性</li>
+                            <li>推行SpringMVC在项目中使用，提升开发和维护效率</li>
+                            <li><strong style="color: var(--success-color);">成就：</strong>打造中国移动商业智能系统，帮助实现千亿级数据分析</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
 
+        <!-- Key Projects Section -->
+        <section class="section">
+            <h2 class="section-title" id="projects-title">核心项目</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-title" data-zh="vuebi数字货币交易所" data-en="vuebi Cryptocurrency Exchange">vuebi数字货币交易所</div>
+                    <div class="project-period">2017.05 - 2018.11</div>
+                    <div class="project-description" id="project1-desc">
+                        <p>虚拟货币交易所，所有代码都是团队自主开发。</p>
+                        <ul>
+                            <li>OTC交易兑换</li>
+                            <li>现货交易撮合系统</li>
+                            <li>钱包归集系统</li>
+                            <li>自动充值提现模块</li>
+                        </ul>
+                        <p><strong style="color: var(--success-color);">成就：</strong>月活3万用户，日交易额达到1亿</p>
+                    </div>
+                </div>
 
-$( ".navbar.navbar-inverse.navbar-static-top a" ).click(function() {
-  $( ".navbar-collapse" ).addClass( "collapse" );
-});
+                <div class="project-card">
+                    <div class="project-title" data-zh="合约差价系统" data-en="Contract CFD System">合约差价系统</div>
+                    <div class="project-period">2019.12 - 2020.06</div>
+                    <div class="project-description" id="project2-desc">
+                        <p>负责交易所整体规划，产品文档编写。</p>
+                        <ul>
+                            <li>C2C入金模块</li>
+                            <li>代理系统设计</li>
+                            <li>市商管理系统</li>
+                            <li>归集钱包系统</li>
+                            <li>K线行情系统</li>
+                        </ul>
+                        <p><strong style="color: var(--success-color);">成就：</strong>入金1000万美金</p>
+                    </div>
+                </div>
 
+                <div class="project-card">
+                    <div class="project-title" data-zh="一创证券-云投顾平台" data-en="First Venture Securities - Cloud Investment Advisory">一创证券-云投顾平台</div>
+                    <div class="project-period">2021.03 - 2021.06</div>
+                    <div class="project-description" id="project3-desc">
+                        <p>为投资顾问们展示和销售服务的平台。</p>
+                        <ul>
+                            <li>问股答疑</li>
+                            <li>直播解答</li>
+                            <li>每日精选</li>
+                        </ul>
+                    </div>
+                </div>
 
-$( ".navbar.navbar-inverse.navbar-static-top a" ).click(function() {
-  $( ".navbar-collapse" ).removeClass( "in" );
-});
+                <div class="project-card">
+                    <div class="project-title">VoxelPunks</div>
+                    <div class="project-period">2022.01 - 2022.03</div>
+                    <div class="project-description" id="project4-desc">
+                        <p>基于cryptovoxels元宇宙平台的punks 3D穿戴设备。</p>
+                        <ul>
+                            <li>设计NFT模式</li>
+                            <li>协调团队</li>
+                            <li>开发技术难题解决</li>
+                            <li>打造Web3.0模块</li>
+                        </ul>
+                    </div>
+                </div>
 
-$( ".navbar-toggle" ).click(function() {
-  $( ".navbar-collapse" ).removeClass( "hideClass" );
-});
+                <div class="project-card">
+                    <div class="project-title" data-zh="去哪买微商城" data-en="E-commerce Platform">去哪买微商城</div>
+                    <div class="project-period">2019.01 - 2020.01</div>
+                    <div class="project-description" id="project5-desc">
+                        <p>一套微商一级分销+分销入驻+抢单模式的微商城。</p>
+                        <ul>
+                            <li>与客户共同探讨商业模式</li>
+                            <li>设计了一级无限代模式，行业内创新模式</li>
+                        </ul>
+                    </div>
+                </div>
 
-});
+                <div class="project-card">
+                    <div class="project-title" data-zh="BICP-中国移动数据分析平台" data-en="BICP - China Mobile Data Analytics">BICP-中国移动数据分析平台</div>
+                    <div class="project-period">2011.04 - 2012.12</div>
+                    <div class="project-description" id="project6-desc">
+                        <p>最早期的大数据分析平台。</p>
+                        <ul>
+                            <li>Dashboard</li>
+                            <li>元数据模块</li>
+                            <li>智能表</li>
+                        </ul>
+                        <p><strong style="color: var(--success-color);">成就：</strong>帮助中国移动实现千亿级数据分析</p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-function copyToClipboard(text) {
-    // 创建一个临时的文本区域元素
-    const tempTextArea = document.createElement('textarea');
-    tempTextArea.value = text; // 设置要复制的文本
-    document.body.appendChild(tempTextArea); // 将元素添加到DOM中
-    tempTextArea.select(); // 选择文本
-    document.execCommand('copy'); // 执行复制命令
-    document.body.removeChild(tempTextArea); // 删除临时元素
-    alert("Text copied to clipboard!"); // 复制完成提示
-}
-</script>
-<!--for portfoli filter jquary-->
-<script src="js/jquery.isotope.js" type="text/javascript"></script>
-<!--for portfoli lightbox -->
-<link type="text/css" rel="stylesheet" id="theme" href="css/jquery-ui-1.8.16.custom.css">
-<link type="text/css" rel="stylesheet" href="css/lightbox.min.css">
-<script type="text/javascript" src="js/jquery.ui.widget.min.js"></script>
-<script type="text/javascript" src="js/jquery.ui.rlightbox.js"></script>
-<!--for skill chat jquary-->
-<script src="js/jquery.easing.min.js"></script>
-<script src="js/jquery.easypiechart.js"></script>
-<!--contact form js-->
-<script type="text/javascript" src="js/jquery.contact.js"></script>
+        <!-- Education Section -->
+        <section class="section">
+            <h2 class="section-title" id="education-title">教育背景</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-date">2014 - 2017</div>
+                    <div class="timeline-company" data-zh="深圳信息职业技术学院" data-en="Shenzhen Institute of Information Technology">深圳信息职业技术学院</div>
+                    <div class="timeline-position" data-zh="大专 - 工商企业管理" data-en="Associate - Business Administration">大专 - 工商企业管理</div>
+                </div>
+            </div>
+        </section>
 
-<!-- Start of Tracking Code Snippets -->
-    <!-- Start of Woopra Code -->
+        <!-- Footer -->
+        <footer class="footer">
+            <p>
+                <span class="terminal-prompt">$</span>
+                <span id="footer-text">感谢查看我的简历</span>
+                <span class="cursor">_</span>
+            </p>
+            <p style="margin-top: 10px; font-size: 0.9em;">
+                © 2024 Jetty Lee. <span id="footer-rights">保留所有权利</span>
+            </p>
+        </footer>
+    </div>
+
     <script>
-        (function(){
-            var t,i,e,n=window,o=document,a=arguments,s="script",r=["config","track","identify","visit","push","call","trackForm","trackClick"],c=function(){var t,i=this;for(i._e=[],t=0;r.length>t;t++)(function(t){i[t]=function(){return i._e.push([t].concat(Array.prototype.slice.call(arguments,0))),i}})(r[t])};for(n._w=n._w||{},t=0;a.length>t;t++)n._w[a[t]]=n[a[t]]=n[a[t]]||new c;i=o.createElement(s),i.async=1,i.src="//static.woopra.com/js/w.js",e=o.getElementsByTagName(s)[0],e.parentNode.insertBefore(i,e)
-        })("woopra");
+        // Matrix Rain Effect
+        const canvas = document.getElementById('matrix-canvas');
+        const ctx = canvas.getContext('2d');
 
-        woopra.config({
-            domain: 'zzn.im'
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+
+        const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789@#$%^&*()_+-=[]{}|;:,.<>?';
+        const fontSize = 14;
+        const columns = canvas.width / fontSize;
+        const drops = Array(Math.floor(columns)).fill(1);
+
+        function drawMatrix() {
+            ctx.fillStyle = 'rgba(10, 14, 39, 0.05)';
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+            ctx.fillStyle = '#00d9ff';
+            ctx.font = fontSize + 'px monospace';
+
+            for (let i = 0; i < drops.length; i++) {
+                const text = chars[Math.floor(Math.random() * chars.length)];
+                ctx.fillText(text, i * fontSize, drops[i] * fontSize);
+
+                if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) {
+                    drops[i] = 0;
+                }
+                drops[i]++;
+            }
+        }
+
+        setInterval(drawMatrix, 35);
+
+        window.addEventListener('resize', () => {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
         });
-        woopra.track();
-    </script>
-    <!-- End of Woopra Code -->
 
-    <!-- Begin W3Counter Tracking Code -->
-    <script type="text/javascript" src="https://www.w3counter.com/tracker.js"></script>
-    <script type="text/javascript">
-        w3counter(86297);
-    </script>
-    <noscript>
-        <div><a href="http://www.w3counter.com"><img src="https://www.w3counter.com/tracker.php?id=86297" style="border: 0" alt="W3Counter" /></a></div>
-    </noscript>
-    <!-- End W3Counter Tracking Code -->
+        // Language Toggle
+        let currentLang = 'zh';
 
-<!-- End of Tracking Code Snippets -->
+        const translations = {
+            zh: {
+                name: '李小东 <span style="color: var(--success-color);">Jetty Lee</span>',
+                position: '交易所CTO | 香港区块链协会副会长 | AI+Web3 技术专家',
+                location: '深圳，中国',
+                'about-title': '关于我',
+                'about-content': '你好，我是李小东（Jetty Lee），来自湖南，2011年起定居深圳。我在华为、新浪彩票等知名公司担任全栈工程师，拥有12年的工作经验。2017年，我开始在金融科技和区块链领域创业，开发过日交易量过亿的虚拟货币交易所和合约交易所，服务过招商证券、国信证券、第一创业证券等顶级券商。目前担任某交易所CTO，专注于AI+Web3技术研究与应用，包括交易所核心技术（钱包系统、撮合引擎）、链上交易、链上数据追踪等领域。同时担任香港区块链协会副会长，推动行业技术标准和生态建设。我还带领团队销售FoxAI机器人并提供AI定制化解决方案。除了热爱技术，我还喜欢唱歌、跑步、打篮球和羽毛球。MBTI测试显示我是ENFP人格，热衷于帮助他人。具备良好的英语工作交流能力。',
+                'advantages-title': '个人优势',
+                'skills-title': '技术技能',
+                'experience-title': '工作经历',
+                'projects-title': '核心项目',
+                'education-title': '教育背景',
+                'footer-text': '感谢查看我的简历',
+                'footer-rights': '保留所有权利',
+                'present0': '至今',
+                'present_hkba': '至今',
+                'present1': '至今',
+                'years': '年',
+                'years2': '年',
+                'years3': '年',
+                'years4': '年',
+                'exp0-list': [
+                    '担任交易所首席技术官，负责整体技术架构设计和团队管理',
+                    '主导交易所核心系统开发：钱包系统、高性能撮合引擎、风控系统',
+                    '深度研究AI+Web3技术融合，推动智能化交易系统建设',
+                    '负责链上交易监控、数据追踪和安全防护体系搭建',
+                    '带领团队开发FoxAI机器人，提供AI定制化解决方案',
+                    '<strong style="color: var(--success-color);">成就：</strong>建立完整的交易所技术体系，实现高并发、高可用、高安全性的核心交易系统'
+                ],
+                'exp-hkba-list': [
+                    '担任香港区块链协会副会长，推动区块链行业发展',
+                    '参与制定行业技术标准和最佳实践规范',
+                    '组织技术交流活动，促进行业生态建设',
+                    '推动Web3技术在实际场景中的应用落地',
+                    '协会官网：<a href="https://hongkongblockchain.org/" target="_blank" style="color: var(--accent-color);">https://hongkongblockchain.org/</a>'
+                ],
+                'exp1-list': [
+                    '主要负责产品需求，从分析到落地实现',
+                    '识别伪需求，并给出执行方案',
+                    '做用户行为分析，数据分析，从数据中找出商机',
+                    '金融产品经验居多，对金融行业敏感',
+                    '负责与券商客户沟通需求，协调人力',
+                    '<strong style="color: var(--success-color);">成就：</strong>谈下华南理工大学、第一创业证券等多个订单，开发华泰证券、安信证券、中信建投等多个项目'
+                ],
+                'exp2-list': [
+                    '负责前端用户体验',
+                    '前端技术研究',
+                    '游戏化产品开发',
+                    '多券商产品开发',
+                    '<strong style="color: var(--success-color);">成就：</strong>2016年5月游戏化模拟炒股上线，开发招商证券、国信证券、银河证券等多个模拟炒股系统'
+                ],
+                'exp3-list': [
+                    '负责资讯系统核心开发',
+                    '处理疑难杂症',
+                    '带领小组学习前沿技术',
+                    '<strong style="color: var(--success-color);">成就：</strong>带领团队打造新浪彩票资讯频道'
+                ],
+                'exp4-list': [
+                    '数据库设计，前后端开发',
+                    '调研新技术在项目中的可行性',
+                    '推行SpringMVC在项目中使用，提升开发和维护效率',
+                    '<strong style="color: var(--success-color);">成就：</strong>打造中国移动商业智能系统，帮助实现千亿级数据分析'
+                ],
+                'project1-desc': '<p>虚拟货币交易所，所有代码都是团队自主开发。</p><ul><li>OTC交易兑换</li><li>现货交易撮合系统</li><li>钱包归集系统</li><li>自动充值提现模块</li></ul><p><strong style="color: var(--success-color);">成就：</strong>月活3万用户，日交易额达到1亿</p>',
+                'project2-desc': '<p>负责交易所整体规划，产品文档编写。</p><ul><li>C2C入金模块</li><li>代理系统设计</li><li>市商管理系统</li><li>归集钱包系统</li><li>K线行情系统</li></ul><p><strong style="color: var(--success-color);">成就：</strong>入金1000万美金</p>',
+                'project3-desc': '<p>为投资顾问们展示和销售服务的平台。</p><ul><li>问股答疑</li><li>直播解答</li><li>每日精选</li></ul>',
+                'project4-desc': '<p>基于cryptovoxels元宇宙平台的punks 3D穿戴设备。</p><ul><li>设计NFT模式</li><li>协调团队</li><li>开发技术难题解决</li><li>打造Web3.0模块</li></ul>',
+                'project5-desc': '<p>一套微商一级分销+分销入驻+抢单模式的微商城。</p><ul><li>与客户共同探讨商业模式</li><li>设计了一级无限代模式，行业内创新模式</li></ul>',
+                'project6-desc': '<p>最早期的大数据分析平台。</p><ul><li>Dashboard</li><li>元数据模块</li><li>智能表</li></ul><p><strong style="color: var(--success-color);">成就：</strong>帮助中国移动实现千亿级数据分析</p>'
+            },
+            en: {
+                name: 'Jetty Lee <span style="color: var(--success-color);">李小东</span>',
+                position: 'Exchange CTO | Vice President of HK Blockchain Association | AI+Web3 Expert',
+                location: 'Shenzhen, China',
+                'about-title': 'About Me',
+                'about-content': 'Hello, I\'m Jetty Lee from Hunan, residing in Shenzhen since 2011. With 12 years of experience as a full-stack engineer at renowned companies like Huawei and Sina Lottery, I embarked on my entrepreneurial journey in fintech and blockchain in 2017. I\'ve developed cryptocurrency and contract exchanges with daily trading volumes exceeding 100 million CNY, serving top securities firms including China Merchants Securities, Guosen Securities, and First Venture Securities. Currently serving as CTO of a leading exchange, I focus on AI+Web3 technology research and applications, including exchange core technologies (wallet systems, matching engines), on-chain trading, and data tracking. I also serve as Vice President of Hong Kong Blockchain Association, promoting industry standards and ecosystem development. I lead the team in developing FoxAI robots and providing customized AI solutions. Beyond technology, I enjoy singing, running, basketball, and badminton. As an ENFP personality, I\'m passionate about helping others. Proficient in English for professional communication.',
+                'advantages-title': 'Personal Advantages',
+                'skills-title': 'Technical Skills',
+                'experience-title': 'Work Experience',
+                'projects-title': 'Key Projects',
+                'education-title': 'Education',
+                'footer-text': 'Thank you for viewing my resume',
+                'footer-rights': 'All Rights Reserved',
+                'present0': 'Present',
+                'present_hkba': 'Present',
+                'present1': 'Present',
+                'years': 'yrs',
+                'years2': 'yrs',
+                'years3': 'yrs',
+                'years4': 'yrs',
+                'exp0-list': [
+                    'Serving as CTO, responsible for overall technical architecture design and team management',
+                    'Leading development of core exchange systems: wallet system, high-performance matching engine, risk control',
+                    'Deep research in AI+Web3 integration, driving intelligent trading system development',
+                    'Responsible for on-chain transaction monitoring, data tracking, and security systems',
+                    'Leading team to develop FoxAI robots and provide customized AI solutions',
+                    '<strong style="color: var(--success-color);">Achievement:</strong> Established complete exchange tech infrastructure with high-concurrency, high-availability, and high-security systems'
+                ],
+                'exp-hkba-list': [
+                    'Serving as Vice President of Hong Kong Blockchain Association, promoting blockchain industry development',
+                    'Participating in formulation of industry technical standards and best practices',
+                    'Organizing technical exchange activities to promote ecosystem development',
+                    'Driving Web3 technology adoption in practical scenarios',
+                    'Association website: <a href="https://hongkongblockchain.org/" target="_blank" style="color: var(--accent-color);">https://hongkongblockchain.org/</a>'
+                ],
+                'exp1-list': [
+                    'Responsible for product requirements from analysis to implementation',
+                    'Identify pseudo-requirements and provide execution plans',
+                    'Conduct user behavior and data analysis to find business opportunities',
+                    'Extensive experience in financial products with industry sensitivity',
+                    'Communicate with securities clients and coordinate resources',
+                    '<strong style="color: var(--success-color);">Achievements:</strong> Secured contracts with South China University of Technology, First Venture Securities, developed projects for Huatai Securities, Essence Securities, CSC Financial'
+                ],
+                'exp2-list': [
+                    'Responsible for frontend user experience',
+                    'Frontend technology research',
+                    'Gamified product development',
+                    'Multi-brokerage product development',
+                    '<strong style="color: var(--success-color);">Achievements:</strong> Launched gamified stock trading simulation in May 2016, developed systems for China Merchants Securities, Guosen Securities, China Galaxy Securities'
+                ],
+                'exp3-list': [
+                    'Core development of information systems',
+                    'Solving complex technical challenges',
+                    'Leading team in learning cutting-edge technologies',
+                    '<strong style="color: var(--success-color);">Achievements:</strong> Led team to build Sina Lottery information platform'
+                ],
+                'exp4-list': [
+                    'Database design and full-stack development',
+                    'Research on new technology feasibility',
+                    'Promoted SpringMVC adoption to improve development efficiency',
+                    '<strong style="color: var(--success-color);">Achievements:</strong> Built China Mobile BI system, enabling trillion-level data analysis'
+                ],
+                'project1-desc': '<p>Cryptocurrency exchange with fully self-developed codebase.</p><ul><li>OTC trading exchange</li><li>Spot trading matching system</li><li>Wallet aggregation system</li><li>Automatic deposit/withdrawal module</li></ul><p><strong style="color: var(--success-color);">Achievement:</strong> 30K MAU, daily trading volume reached 100M CNY</p>',
+                'project2-desc': '<p>Overall exchange planning and product documentation.</p><ul><li>C2C deposit module</li><li>Agent system design</li><li>Market maker management</li><li>Wallet aggregation system</li><li>K-line market system</li></ul><p><strong style="color: var(--success-color);">Achievement:</strong> 10M USD in deposits</p>',
+                'project3-desc': '<p>Platform for investment advisors to showcase and sell services.</p><ul><li>Q&A about stocks</li><li>Live streaming</li><li>Daily selections</li></ul>',
+                'project4-desc': '<p>3D wearable devices for Punks on Cryptovoxels metaverse platform.</p><ul><li>NFT model design</li><li>Team coordination</li><li>Technical problem solving</li><li>Web3.0 module development</li></ul>',
+                'project5-desc': '<p>E-commerce platform with single-level distribution and order-grabbing model.</p><ul><li>Explored business models with clients</li><li>Designed innovative single-level unlimited distribution model</li></ul>',
+                'project6-desc': '<p>Early big data analytics platform.</p><ul><li>Dashboard</li><li>Metadata module</li><li>Smart tables</li></ul><p><strong style="color: var(--success-color);">Achievement:</strong> Enabled trillion-level data analysis for China Mobile</p>'
+            }
+        };
+
+        function toggleLanguage() {
+            currentLang = currentLang === 'zh' ? 'en' : 'zh';
+            const langBtn = document.getElementById('lang-text');
+            if (langBtn) langBtn.textContent = currentLang === 'zh' ? 'EN' : '中文';
+            
+            // Update all text content with null checks
+            const trans = translations[currentLang];
+            
+            const updateElement = (id, content, isHTML = false) => {
+                const el = document.getElementById(id);
+                if (el) {
+                    if (isHTML) {
+                        el.innerHTML = content;
+                    } else {
+                        el.textContent = content;
+                    }
+                }
+            };
+
+            updateElement('name', trans.name, true);
+            updateElement('position', trans.position);
+            updateElement('location', trans.location);
+            updateElement('about-title', trans['about-title']);
+            updateElement('about-content', trans['about-content']);
+            updateElement('advantages-title', trans['advantages-title']);
+            updateElement('skills-title', trans['skills-title']);
+            updateElement('experience-title', trans['experience-title']);
+            updateElement('projects-title', trans['projects-title']);
+            updateElement('education-title', trans['education-title']);
+            updateElement('footer-text', trans['footer-text']);
+            updateElement('footer-rights', trans['footer-rights']);
+            updateElement('present0', trans['present0']);
+            updateElement('present_hkba', trans['present_hkba']);
+            updateElement('present1', trans['present1']);
+            updateElement('years', trans['years']);
+            updateElement('years2', trans['years2']);
+            updateElement('years3', trans['years3']);
+            updateElement('years4', trans['years4']);
+
+            // Update advantages
+            document.querySelectorAll('.advantage-item').forEach(item => {
+                const key = currentLang === 'zh' ? 'data-zh' : 'data-en';
+                if (item.getAttribute(key)) {
+                    const text = item.getAttribute(key);
+                    // Find text node or use textContent
+                    const textNodes = Array.from(item.childNodes).filter(node => node.nodeType === Node.TEXT_NODE);
+                    if (textNodes.length > 0) {
+                        textNodes[0].textContent = text;
+                    } else {
+                        item.textContent = text;
+                    }
+                }
+            });
+
+            // Update experience lists
+            const updateList = (id, items) => {
+                const list = document.getElementById(id);
+                if (list) {
+                    list.innerHTML = items.map(item => `<li>${item}</li>`).join('');
+                }
+            };
+
+            updateList('exp0-list', trans['exp0-list']);
+            updateList('exp-hkba-list', trans['exp-hkba-list']);
+            updateList('exp1-list', trans['exp1-list']);
+            updateList('exp2-list', trans['exp2-list']);
+            updateList('exp3-list', trans['exp3-list']);
+            updateList('exp4-list', trans['exp4-list']);
+
+            // Update project descriptions
+            updateElement('project1-desc', trans['project1-desc'], true);
+            updateElement('project2-desc', trans['project2-desc'], true);
+            updateElement('project3-desc', trans['project3-desc'], true);
+            updateElement('project4-desc', trans['project4-desc'], true);
+            updateElement('project5-desc', trans['project5-desc'], true);
+            updateElement('project6-desc', trans['project6-desc'], true);
+
+            // Update timeline items with data attributes
+            document.querySelectorAll('[data-zh]').forEach(item => {
+                if (!item.classList.contains('advantage-item')) {
+                    const key = currentLang === 'zh' ? 'data-zh' : 'data-en';
+                    const text = item.getAttribute(key);
+                    if (text) {
+                        item.textContent = text;
+                    }
+                }
+            });
+        }
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+
+        // Add scroll reveal animation
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.section, .timeline-item, .project-card').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(20px)';
+            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(el);
+        });
+    </script>
 </body>
 </html>
