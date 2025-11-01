@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>李小东 Jetty Lee - 技术总监/产品经理</title>
+    <title>李小东 Jetty Lee - 技术总监/产品经理/Web3/AI</title>
     <style>
         :root {
             --bg-primary: #0a0e27;
@@ -388,17 +388,17 @@
 </head>
 <body>
     <canvas id="matrix-canvas"></canvas>
-    
+
     <div class="container">
         <!-- Header Section -->
         <header class="header">
             <div class="header-content">
                 <img src="https://www.jettylee.com/images/jetty.jpeg" alt="Jetty Lee" class="avatar" id="avatar">
-                
+
                 <div class="header-info">
                     <h1 id="name">李小东 <span style="color: var(--success-color);">Jetty Lee</span></h1>
                     <div class="subtitle" id="position">交易所CTO | 香港区块链协会副会长 | AI+Web3 技术专家</div>
-                    
+
                     <div class="contact-info">
                         <a href="mailto:jetty.lee@icloud.com" class="contact-item">
                             <span>📧</span> jetty.lee@icloud.com
@@ -417,7 +417,7 @@
                         </span>
                     </div>
                 </div>
-                
+
                 <button class="lang-switch" onclick="toggleLanguage()">
                     <span id="lang-text">EN</span>
                 </button>
@@ -902,10 +902,10 @@
             currentLang = currentLang === 'zh' ? 'en' : 'zh';
             const langBtn = document.getElementById('lang-text');
             if (langBtn) langBtn.textContent = currentLang === 'zh' ? 'EN' : '中文';
-            
+
             // Update all text content with null checks
             const trans = translations[currentLang];
-            
+
             const updateElement = (id, content, isHTML = false) => {
                 const el = document.getElementById(id);
                 if (el) {
