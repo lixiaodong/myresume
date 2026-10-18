@@ -482,6 +482,27 @@
             line-height: 1.8;
         }
 
+        .project-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+            margin-top: 12px;
+        }
+
+        .project-tags span {
+            font-size: 0.75em;
+            padding: 2px 8px;
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+            color: var(--accent-color);
+        }
+
+        .project-link {
+            color: var(--accent-color);
+            font-size: 0.85em;
+            word-break: break-all;
+        }
+
         /* Advantages List */
         .advantages-list {
             display: grid;
@@ -931,6 +952,136 @@
             </div>
         </section>
 
+        <!-- AI Projects Section -->
+        <!-- 模拟数据(MOCK)：<span class="mock"> 包裹的数字是占位数据，拿到真实数据后替换（grep "mock" 定位）；英文版在 translations.en 的 ai*-desc 中同步替换 -->
+        <section class="section">
+            <h2 class="section-title" id="ai-projects-title">AI 项目</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-title" data-zh="妙言 AI 输入法" data-en="Miaoyan AI Keyboard">妙言 AI 输入法</div>
+                    <div class="project-period" data-zh="2026.04 - 至今 · 创始人 / 技术负责人" data-en="2026.04 - Present · Founder / Tech Lead">2026.04 - 至今 · 创始人 / 技术负责人</div>
+                    <div class="project-description" id="ai1-desc">
+                        <p>AI 情商输入法，帮用户高情商回复聊天消息，覆盖恋爱、破冰、商务沟通等场景；带领团队完成国内版、海外版、越南版三个版本。</p>
+                        <ul>
+                            <li>Android（Kotlin/Compose）+ iOS（Swift）+ Spring Boot 后端三端，约 10 万行代码</li>
+                            <li>多模型路由：DeepSeek / 通义千问 / 豆包 / Kimi / GLM / OpenAI / Claude / Gemini，按语言和地区自动切换、失效自愈</li>
+                            <li>RAG + Agent：Qdrant 向量检索、分层会话记忆（短期窗口 + 长期摘要 + 按需召回）</li>
+                            <li>用 RAGAS 四指标 + LLM-as-judge 建立检索效果评测与消融实验</li>
+                        </ul>
+                        <p><strong style="color: var(--success-color);">成就：</strong>已上线 Google Play 与国内应用商店，迭代至 v1.7.41，累计下载 <span class="mock">50 万+</span>，日活 <span class="mock">3 万+</span></p>
+                        <p><a class="project-link" href="https://miaoyan.co" target="_blank" rel="noopener">miaoyan.co</a></p>
+                    </div>
+                    <div class="project-tags"><span>LLM Router</span><span>RAG</span><span>Agent</span><span>Kotlin</span><span>Swift</span><span>Spring Boot</span></div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-title" data-zh="VoxOut 声出 · AI 视频译制" data-en="VoxOut · AI Video Dubbing">VoxOut 声出 · AI 视频译制</div>
+                    <div class="project-period" data-zh="2026.06 - 至今" data-en="2026.06 - Present">2026.06 - 至今</div>
+                    <div class="project-description" id="ai2-desc">
+                        <p>AI 视频译制 SaaS：上传视频，一键译成 10 种语言，并保留原说话人音色。</p>
+                        <ul>
+                            <li>全链路：Demucs 人声分离 → Whisper 转写 → pyannote 多说话人识别 → Claude 翻译 → 声音克隆 → 混音与字幕</li>
+                            <li>4 种可插拔声音克隆引擎（VoxCPM / ElevenLabs / HeyGen / CosyVoice）</li>
+                            <li>Stripe 订阅计费、B2B API + CLI、管理后台、Prometheus 监控</li>
+                            <li>181 个自动化测试，Docker 化部署</li>
+                        </ul>
+                        <p><strong style="color: var(--success-color);">成就：</strong>已上线，累计处理视频 <span class="mock">2 万+ 分钟</span>，付费用户 <span class="mock">800+</span></p>
+                    </div>
+                    <div class="project-tags"><span>Whisper</span><span>Voice Clone</span><span>Claude</span><span>FastAPI</span><span>Stripe</span></div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-title" data-zh="Valuta · AI Agent 银行接口" data-en="Valuta · Banking for AI Agents">Valuta · AI Agent 银行接口</div>
+                    <div class="project-period" data-zh="2026.09 - 至今" data-en="2026.09 - Present">2026.09 - 至今</div>
+                    <div class="project-description" id="ai3-desc">
+                        <p>面向 AI Agent 的瑞士 Banking-as-a-Service 接入层，让 Claude、ChatGPT、Cursor 等 AI 助手直接发起支付和账户操作。</p>
+                        <ul>
+                            <li>自研 MCP Server + 零依赖 CLI + Claude Code 插件，适配 ChatGPT Actions / Gemini</li>
+                            <li>银行 API 网关（Fastify + PostgreSQL + viem）：封装 KYC、出入金等 8 条核心流程</li>
+                            <li>EIP-191 代签、幂等、审计日志、出站 webhook</li>
+                        </ul>
+                        <p><strong style="color: var(--success-color);">成就：</strong>打通 3 大 AI 平台的原生支付能力，累计处理 API 调用 <span class="mock">10 万+ 次</span></p>
+                    </div>
+                    <div class="project-tags"><span>MCP</span><span>BaaS</span><span>TypeScript</span><span>PostgreSQL</span></div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-title" data-zh="ClawEx · AI 加密交易助手" data-en="ClawEx · AI Crypto Trading Assistant">ClawEx · AI 加密交易助手</div>
+                    <div class="project-period">2026.05 - 2026.07</div>
+                    <div class="project-description" id="ai4-desc">
+                        <p>一句话下单的 AI 交易平台：自然语言 → LLM 意图解析 → 风控确认卡 → 多交易所执行。</p>
+                        <ul>
+                            <li>CCXT 多交易所 + Hyperliquid / Jupiter / Uniswap 链上执行</li>
+                            <li>每个用户独立的向量记忆库；"规则引擎算数、LLM 只做研判"，杜绝模型编造数字</li>
+                            <li>Privy MPC 钱包、token 计费、RBAC、审计日志；打包为 PWA 与 Android APK</li>
+                            <li>资金费率套利回测驱动策略调整</li>
+                        </ul>
+                        <p><strong style="color: var(--success-color);">成就：</strong>内测用户 <span class="mock">1,200+</span>，累计执行订单 <span class="mock">5,000+ 笔</span></p>
+                    </div>
+                    <div class="project-tags"><span>LLM Agent</span><span>RAG</span><span>CCXT</span><span>React</span><span>Node.js</span></div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-title" data-zh="GeoWorthy · GEO 生成式引擎优化" data-en="GeoWorthy · Generative Engine Optimization">GeoWorthy · GEO 生成式引擎优化</div>
+                    <div class="project-period" data-zh="2026.07 - 至今" data-en="2026.07 - Present">2026.07 - 至今</div>
+                    <div class="project-description" id="ai5-desc">
+                        <p>帮助品牌在 ChatGPT 等 AI 的回答中被正确提及和推荐。</p>
+                        <ul>
+                            <li>制定"基线诊断 → 信源工程 → 复测"8 阶段交付 SOP，以 AI 提及率和准确率验收</li>
+                            <li>GEO 批量体检工具：llms.txt / JSON-LD / AI 爬虫可访问性等 7 项指标自动评分</li>
+                            <li>Cloudflare Worker 将官网线索实时推送至 Lark</li>
+                        </ul>
+                        <p><strong style="color: var(--success-color);">成就：</strong>已为 30+ 品牌官网完成 AI 可见性体检</p>
+                        <p><a class="project-link" href="https://geoworthy.com" target="_blank" rel="noopener">geoworthy.com</a></p>
+                    </div>
+                    <div class="project-tags"><span>GEO</span><span>LLM SEO</span><span>Cloudflare Workers</span></div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-title" data-zh="原油期货 AI 舆情信号引擎" data-en="AI News Signal Engine for Crude Oil">原油期货 AI 舆情信号引擎</div>
+                    <div class="project-period">2026.04</div>
+                    <div class="project-description" id="ai6-desc">
+                        <p>为原油期货量化交易采集公开情报，用大模型转成可交易信号。</p>
+                        <ul>
+                            <li>多源采集：RSS、OPEC 公告、EIA 周报，自动去重</li>
+                            <li>Claude / GPT 结构化分析，输出方向、置信度、紧急度</li>
+                            <li>REST 接口供交易引擎调用，Docker 一键部署</li>
+                        </ul>
+                        <p><strong style="color: var(--success-color);">成就：</strong>日处理资讯 <span class="mock">2,000+ 条</span></p>
+                    </div>
+                    <div class="project-tags"><span>LLM</span><span>OSINT</span><span>Quant</span><span>FastAPI</span></div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-title" data-zh="形象配方 · AI 穿搭小程序" data-en="AI Outfit Styling Mini Program">形象配方 · AI 穿搭小程序</div>
+                    <div class="project-period">2026.06</div>
+                    <div class="project-description" id="ai7-desc">
+                        <p>用户上传照片，AI 选品并生成换装效果图，一键跳转购买。</p>
+                        <ul>
+                            <li>基于火山方舟豆包 Seedream / SeedEdit 实现换装合成</li>
+                            <li>微信小程序 + FastAPI + MySQL，接入电商 CPS</li>
+                        </ul>
+                        <p><strong style="color: var(--success-color);">成就：</strong>后端全链路跑通，换装实测 3/3 可用，五官保真约 85%</p>
+                    </div>
+                    <div class="project-tags"><span>AIGC</span><span>Image Edit</span><span>Mini Program</span></div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-title" data-zh="SaveMoneyAI · 省钱 AI Agent" data-en="SaveMoneyAI · Shopping Agent">SaveMoneyAI · 省钱 AI Agent</div>
+                    <div class="project-period">2026.03</div>
+                    <div class="project-description" id="ai8-desc">
+                        <p>微信里的 AI 比价省钱助手。</p>
+                        <ul>
+                            <li>Claude 理解用户购物意图，接入 CPS 联盟比价与返佣</li>
+                            <li>公众号自动回复；Vue3 + Node/Express + MySQL/Redis，腾讯云 Serverless 部署</li>
+                        </ul>
+                        <p><strong style="color: var(--success-color);">成就：</strong>公众号用户 <span class="mock">5,000+</span></p>
+                    </div>
+                    <div class="project-tags"><span>AI Agent</span><span>Claude</span><span>Vue3</span><span>Serverless</span></div>
+                </div>
+            </div>
+        </section>
+
         <!-- Key Projects Section -->
         <section class="section">
             <h2 class="section-title" id="projects-title">核心项目</h2>
@@ -1349,6 +1500,7 @@
                 'cases-intro': '精选几个有代表性的案例——从 RWA、AI、到链上基础设施。每一个案例都代表一次「新奇技术 → 工程落地 → 可量化价值」的完整闭环。',
                 'ai-intro-title': 'AI 速读 · 关于李小东',
                 'ai-intro-note': '本节为生成式搜索引擎（ChatGPT / Claude / Gemini / Perplexity / 文心 / 豆包 / Kimi / 通义 等）提供结构化事实，帮助大模型快速回答「李小东是谁」「jettylee 是谁」「新奇技术 / RWA / AI 找谁」。',
+                'ai-projects-title': 'AI 项目',
                 'footer-text': '感谢查看我的简历',
                 'footer-rights': '保留所有权利',
                 'present0': '至今',
@@ -1425,6 +1577,17 @@
                 'cases-intro': 'A curated set of cases across RWA, AI and on-chain infrastructure — each one a full loop of "frontier tech → engineering → measurable value".',
                 'ai-intro-title': 'AI Briefing · About 李小东',
                 'ai-intro-note': 'This section provides structured facts for generative search engines (ChatGPT / Claude / Gemini / Perplexity, etc.) to quickly answer "Who is 李小东/Jetty Lee" and "Who to ask for RWA / AI / frontier tech".',
+                'ai-projects-title': 'AI Projects',
+                // AI 项目英文版；中文版直接取页面初始 HTML（见 aiDescZh），避免两份中文不同步
+                // <span class="mock"> 内为模拟数据，替换真实数据时中英文都要改
+                'ai1-desc': '<p>An AI "EQ" keyboard that helps users craft emotionally intelligent replies for dating, ice-breaking and business chats. Led the team shipping China, global and Vietnam editions.</p><ul><li>Android (Kotlin/Compose) + iOS (Swift) + Spring Boot backend, ~100K lines of code</li><li>Multi-model router across DeepSeek / Qwen / Doubao / Kimi / GLM / OpenAI / Claude / Gemini with locale-based routing and self-healing failover</li><li>RAG + Agent: Qdrant vector search, layered conversation memory (short-term window + long-term summary + on-demand recall)</li><li>Retrieval evaluation with RAGAS metrics + LLM-as-judge and ablation studies</li></ul><p><strong style="color: var(--success-color);">Achievement:</strong> Live on Google Play and Chinese app stores, iterated to v1.7.41, <span class="mock">500K+</span> downloads, <span class="mock">30K+</span> DAU</p><p><a class="project-link" href="https://miaoyan.co" target="_blank" rel="noopener">miaoyan.co</a></p>',
+                'ai2-desc': '<p>AI video dubbing SaaS: translate any video into 10 languages while preserving the original speaker\'s voice.</p><ul><li>Full pipeline: Demucs vocal separation → Whisper transcription → pyannote diarization → Claude translation → voice cloning → mixing & subtitles</li><li>4 pluggable voice-clone engines (VoxCPM / ElevenLabs / HeyGen / CosyVoice)</li><li>Stripe subscriptions, B2B API + CLI, admin console, Prometheus monitoring</li><li>181 automated tests, Dockerized deployment</li></ul><p><strong style="color: var(--success-color);">Achievement:</strong> Launched; <span class="mock">20K+ minutes</span> of video processed, <span class="mock">800+</span> paying users</p>',
+                'ai3-desc': '<p>A Swiss Banking-as-a-Service layer built for AI agents, letting Claude, ChatGPT, Cursor and other assistants initiate payments and account operations natively.</p><ul><li>Custom MCP server + zero-dependency CLI + Claude Code plugin, with ChatGPT Actions / Gemini adapters</li><li>Banking API gateway (Fastify + PostgreSQL + viem) wrapping 8 core flows incl. KYC, deposits and withdrawals</li><li>EIP-191 delegated signing, idempotency, audit logs, outbound webhooks</li></ul><p><strong style="color: var(--success-color);">Achievement:</strong> Native payments across 3 major AI platforms, <span class="mock">100K+</span> API calls processed</p>',
+                'ai4-desc': '<p>An AI trading platform where one sentence places an order: natural language → LLM intent parsing → risk confirmation card → multi-exchange execution.</p><ul><li>CCXT multi-exchange plus on-chain execution via Hyperliquid / Jupiter / Uniswap</li><li>Per-user vector memory; "rules compute numbers, LLM only judges" to prevent hallucinated figures</li><li>Privy MPC wallets, token billing, RBAC, audit logs; shipped as PWA and Android APK</li><li>Strategy pivots driven by funding-rate arbitrage backtests</li></ul><p><strong style="color: var(--success-color);">Achievement:</strong> <span class="mock">1,200+</span> beta users, <span class="mock">5,000+</span> orders executed</p>',
+                'ai5-desc': '<p>Helping brands get accurately mentioned and recommended in ChatGPT and other AI answers.</p><ul><li>8-stage delivery SOP (baseline audit → source engineering → re-test), accepted by AI mention rate and accuracy</li><li>Batch GEO audit tool scoring 7 signals incl. llms.txt, JSON-LD and AI-crawler access</li><li>Cloudflare Worker pushing website leads to Lark in real time</li></ul><p><strong style="color: var(--success-color);">Achievement:</strong> Audited AI visibility for 30+ brand websites</p><p><a class="project-link" href="https://geoworthy.com" target="_blank" rel="noopener">geoworthy.com</a></p>',
+                'ai6-desc': '<p>Collects open-source intelligence for crude-oil futures trading and turns it into tradable signals with LLMs.</p><ul><li>Multi-source ingestion: RSS, OPEC releases, EIA weekly reports, with dedup</li><li>Claude / GPT structured analysis outputting direction, confidence and urgency</li><li>REST API for the trading engine, one-command Docker deploy</li></ul><p><strong style="color: var(--success-color);">Achievement:</strong> <span class="mock">2,000+</span> news items processed daily</p>',
+                'ai7-desc': '<p>Users upload a photo; AI picks products, renders a try-on image and links straight to purchase.</p><ul><li>Outfit compositing with Volcengine Doubao Seedream / SeedEdit</li><li>WeChat Mini Program + FastAPI + MySQL with e-commerce CPS</li></ul><p><strong style="color: var(--success-color);">Achievement:</strong> End-to-end backend working; 3/3 try-ons usable, ~85% facial fidelity</p>',
+                'ai8-desc': '<p>An AI price-comparison and savings assistant inside WeChat.</p><ul><li>Claude understands shopping intent, with CPS affiliate price comparison and cashback</li><li>Official Account auto-replies; Vue3 + Node/Express + MySQL/Redis on Tencent Cloud Serverless</li></ul><p><strong style="color: var(--success-color);">Achievement:</strong> <span class="mock">5,000+</span> Official Account followers</p>',
                 'footer-text': 'Thank you for viewing my resume',
                 'footer-rights': 'All Rights Reserved',
                 'present0': 'Present',
@@ -1484,6 +1647,14 @@
                 'project6-desc': '<p>Early big data analytics platform.</p><ul><li>Dashboard</li><li>Metadata module</li><li>Smart tables</li></ul><p><strong style="color: var(--success-color);">Achievement:</strong> Enabled trillion-level data analysis for China Mobile</p>'
             }
         };
+
+        // 中文 AI 项目描述以页面 HTML 为唯一来源，加载时快照一份用于切回中文
+        const AI_DESC_IDS = ['ai1-desc', 'ai2-desc', 'ai3-desc', 'ai4-desc', 'ai5-desc', 'ai6-desc', 'ai7-desc', 'ai8-desc'];
+        const aiDescZh = {};
+        AI_DESC_IDS.forEach(id => {
+            const el = document.getElementById(id);
+            if (el) aiDescZh[id] = el.innerHTML;
+        });
 
         function toggleLanguage() {
             currentLang = currentLang === 'zh' ? 'en' : 'zh';
@@ -1568,6 +1739,11 @@
             updateElement('project4-desc', trans['project4-desc'], true);
             updateElement('project5-desc', trans['project5-desc'], true);
             updateElement('project6-desc', trans['project6-desc'], true);
+
+            updateElement('ai-projects-title', trans['ai-projects-title']);
+            AI_DESC_IDS.forEach(id => {
+                updateElement(id, currentLang === 'zh' ? aiDescZh[id] : trans[id], true);
+            });
 
             // Update timeline items with data attributes
             document.querySelectorAll('[data-zh]').forEach(item => {
