@@ -1,0 +1,823 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>李小东 Jetty Lee · AI 数字分身 | 香港区块链协会副会长</title>
+<meta name="description" content="李小东（Jetty Lee）— 香港区块链协会副会长、AI+Web3 技术专家、RWA 架构师、连续创业者。12 年全栈经验、8 个 AI 创业项目、亿级交易系统设计者。官网即他的 AI 数字分身：可直接对话，或按 1 USDC/分钟连线虚拟人。">
+<link rel="canonical" href="https://www.jettylee.com/">
+<meta property="og:type" content="profile">
+<meta property="og:site_name" content="李小东 Jetty Lee">
+<meta property="og:title" content="李小东 Jetty Lee · AI 数字分身">
+<meta property="og:description" content="香港区块链协会副会长 · RWA / AI+Web3 技术专家。官网即 AI 数字分身：免费文字对话，或 1 USDC/分钟连线虚拟人。">
+<meta property="og:url" content="https://www.jettylee.com/">
+<meta property="og:image" content="https://www.jettylee.com/images/jetty.jpeg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@jettyleex">
+<meta name="twitter:title" content="李小东 Jetty Lee · AI 数字分身">
+<meta name="twitter:description" content="香港区块链协会副会长 · RWA / AI+Web3 技术专家。可对话、可付费连线的个人 AI 数字分身。">
+<meta name="twitter:image" content="https://www.jettylee.com/images/jetty.jpeg">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "李小东",
+  "alternateName": ["Jetty Lee", "jettyleex"],
+  "url": "https://www.jettylee.com/",
+  "image": "https://www.jettylee.com/images/jetty.jpeg",
+  "jobTitle": "香港区块链协会副会长",
+  "description": "AI+Web3 技术专家、RWA 架构师、连续创业者，12 年全栈开发经验。",
+  "worksFor": {"@type": "Organization", "name": "香港区块链协会", "url": "https://hongkongblockchain.org/"},
+  "knowsAbout": ["RWA 代币化", "AI Agent", "RAG", "Solidity", "Web3 架构", "AI 数字分身", "全栈开发"],
+  "knowsLanguage": ["zh-CN", "en"],
+  "sameAs": ["https://x.com/jettyleex", "https://github.com/lixiaodong", "https://hongkongblockchain.org/"]
+}
+</script>
+<style>
+:root{
+  --bg:#05070f; --bg2:#0a0f1e; --card:#0d1424; --line:rgba(120,160,255,.12);
+  --cyan:#22d3ee; --violet:#8b5cf6; --gold:#f5c76b; --text:#e8eefc; --sub:#8fa3c8;
+  --grad:linear-gradient(120deg,#22d3ee,#8b5cf6);
+}
+*{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+svg.icn{width:1em;height:1em;vertical-align:-.12em;flex-shrink:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Helvetica Neue","Microsoft YaHei",sans-serif;overflow-x:hidden;line-height:1.7}
+::selection{background:rgba(34,211,238,.35)}
+canvas#stars{position:fixed;inset:0;z-index:0;pointer-events:none}
+.wrap{position:relative;z-index:1;max-width:1080px;margin:0 auto;padding:0 20px}
+section{padding:72px 0 40px;position:relative}
+.kicker{display:inline-flex;align-items:center;gap:8px;font-size:12px;letter-spacing:.35em;color:var(--cyan);text-transform:uppercase;margin-bottom:10px}
+.kicker::before{content:"";width:26px;height:1px;background:var(--grad)}
+h2.sec{font-size:clamp(24px,4.6vw,36px);font-weight:800;letter-spacing:.02em;margin-bottom:8px}
+p.secsub{color:var(--sub);font-size:14px;max-width:640px}
+.reveal{opacity:1}
+body.io .reveal{opacity:0;transform:translateY(34px);transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1)}
+body.io .reveal.in{opacity:1;transform:none}
+
+/* ---------- top nav ---------- */
+nav.top{position:fixed;top:0;left:0;right:0;z-index:50;backdrop-filter:blur(14px);background:rgba(5,7,15,.55);border-bottom:1px solid var(--line)}
+nav.top .inner{max-width:1080px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:12px 20px}
+.brand{font-weight:800;font-size:15px;letter-spacing:.06em;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+nav.top .links{display:flex;gap:18px;font-size:13px}
+nav.top a{color:var(--sub);text-decoration:none;transition:color .25s}
+nav.top a:hover{color:var(--cyan)}
+@media(max-width:720px){nav.top .links{display:none}}
+
+/* ---------- hero / digital human ---------- */
+header.hero{min-height:100svh;display:flex;align-items:center;padding:110px 0 60px}
+.hero-grid{display:grid;grid-template-columns:340px 1fr;gap:56px;align-items:center;width:100%}
+@media(max-width:860px){.hero-grid{grid-template-columns:1fr;gap:40px;text-align:center}}
+.avatar-stage{position:relative;width:320px;height:320px;margin:0 auto}
+.ring{position:absolute;inset:0;border-radius:50%}
+.ring.r1{background:conic-gradient(from 0deg,transparent 0 70%,var(--cyan) 82%,var(--violet) 92%,transparent 100%);animation:spin 6s linear infinite;filter:drop-shadow(0 0 14px rgba(34,211,238,.5))}
+.ring.r2{inset:14px;background:conic-gradient(from 180deg,transparent 0 60%,rgba(139,92,246,.9) 78%,transparent 96%);animation:spin 9s linear infinite reverse}
+.ring.r3{inset:-14px;border:1px dashed rgba(120,160,255,.25);animation:spin 30s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+.avatar-frame{position:absolute;inset:28px;border-radius:50%;overflow:hidden;background:#0a0f1e;box-shadow:0 0 60px rgba(34,211,238,.25),inset 0 0 40px rgba(0,0,0,.6)}
+.avatar-frame img{width:100%;height:100%;object-fit:cover;transform:scale(1.02)}
+.holo{position:absolute;inset:0;background:repeating-linear-gradient(0deg,rgba(34,211,238,.05) 0 2px,transparent 2px 5px);mix-blend-mode:screen;pointer-events:none}
+.scanline{position:absolute;left:0;right:0;height:34%;background:linear-gradient(180deg,transparent,rgba(34,211,238,.18),transparent);animation:scan 4.2s ease-in-out infinite;pointer-events:none}
+@keyframes scan{0%,100%{top:-35%}50%{top:100%}}
+.orbit-dot{position:absolute;width:8px;height:8px;border-radius:50%;background:var(--cyan);box-shadow:0 0 12px var(--cyan)}
+.orbit-dot.d2{background:var(--violet);box-shadow:0 0 12px var(--violet);width:6px;height:6px}
+.status-chip{position:absolute;bottom:6px;left:50%;transform:translateX(-50%);display:flex;align-items:center;gap:7px;background:rgba(10,15,30,.85);border:1px solid var(--line);border-radius:99px;padding:6px 14px;font-size:12px;color:var(--sub);white-space:nowrap}
+.status-chip .dot{width:8px;height:8px;border-radius:50%;background:#34d399;box-shadow:0 0 10px #34d399;animation:pulse 1.6s infinite}
+@keyframes pulse{50%{opacity:.35}}
+.hero h1{font-size:clamp(34px,6vw,56px);font-weight:900;line-height:1.15;letter-spacing:.01em}
+.hero h1 .grad{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero .titles{margin:14px 0 6px;font-size:15px;color:var(--sub);display:flex;flex-wrap:wrap;gap:8px;justify-content:inherit}
+.hero .titles span{border:1px solid var(--line);border-radius:99px;padding:4px 13px;background:rgba(13,20,36,.6)}
+.hero .typeline{min-height:2.2em;margin:18px 0 6px;font-size:16px;color:#c9d8f5}
+.hero .typeline .caret{display:inline-block;width:2px;height:1.1em;background:var(--cyan);vertical-align:-2px;animation:blink 1s steps(1) infinite}
+@keyframes blink{50%{opacity:0}}
+.hero .cta{display:flex;gap:14px;margin-top:22px;flex-wrap:wrap;justify-content:inherit}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:12px 26px;border-radius:99px;font-size:14px;font-weight:600;text-decoration:none;transition:transform .25s,box-shadow .25s;border:1px solid transparent}
+.btn.primary{background:var(--grad);color:#04121a;box-shadow:0 8px 30px rgba(34,211,238,.3)}
+.btn.ghost{border-color:var(--line);color:var(--text);background:rgba(13,20,36,.5)}
+.btn:hover{transform:translateY(-3px)}
+.wave{display:inline-flex;align-items:flex-end;gap:3px;height:18px;margin-left:4px}
+.wave i{width:3px;background:var(--cyan);border-radius:2px;height:4px;opacity:.85}
+.speaking .wave i{animation:wv .7s ease-in-out infinite}
+.wave i:nth-child(2){animation-delay:.12s}.wave i:nth-child(3){animation-delay:.24s}.wave i:nth-child(4){animation-delay:.36s}.wave i:nth-child(5){animation-delay:.48s}
+@keyframes wv{0%,100%{height:4px}50%{height:18px}}
+
+/* ---------- twin Q&A ---------- */
+.twin{margin-top:34px;border:1px solid var(--line);border-radius:18px;background:rgba(13,20,36,.65);backdrop-filter:blur(8px);padding:18px 18px 14px}
+.twin .hd{display:flex;align-items:center;gap:10px;font-size:13px;color:var(--sub);margin-bottom:12px}
+.twin .hd b{color:var(--text)}
+.twin .a{font-size:14.5px;color:#d5e2fb;min-height:3.4em;background:rgba(5,8,16,.5);border:1px solid var(--line);border-radius:12px;padding:12px 14px}
+.twin .chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+.twin .chip{font-size:12.5px;color:var(--cyan);border:1px solid rgba(34,211,238,.35);border-radius:99px;padding:6px 13px;cursor:pointer;background:transparent;transition:background .25s,color .25s}
+.twin .chip:hover{background:rgba(34,211,238,.14)}
+.twin .chip:disabled{opacity:.4;cursor:default}
+
+/* ---------- stats ---------- */
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:34px}
+@media(max-width:860px){.stats{grid-template-columns:repeat(2,1fr)}}
+.stat{border:1px solid var(--line);border-radius:16px;padding:22px 18px;background:linear-gradient(160deg,rgba(13,20,36,.9),rgba(10,15,30,.5));text-align:center;position:relative;overflow:hidden}
+.stat::after{content:"";position:absolute;inset:auto -30% -60% -30%;height:80%;background:radial-gradient(closest-side,rgba(139,92,246,.16),transparent);pointer-events:none}
+.stat b{font-size:clamp(28px,4vw,40px);font-weight:900;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.stat span{display:block;margin-top:4px;font-size:12.5px;color:var(--sub)}
+
+/* ---------- about ---------- */
+.about-grid{display:grid;grid-template-columns:1.35fr .9fr;gap:24px;margin-top:30px}
+@media(max-width:860px){.about-grid{grid-template-columns:1fr}}
+.card{border:1px solid var(--line);border-radius:18px;background:var(--card);padding:26px}
+.card p{color:#c3d2ef;font-size:14.5px}
+.tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
+.tags i{font-style:normal;font-size:12px;color:var(--sub);border:1px solid var(--line);border-radius:99px;padding:4px 12px;background:rgba(10,15,30,.6)}
+.tags i.hot{color:var(--cyan);border-color:rgba(34,211,238,.4)}
+.facts{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:4px}
+.fact{border:1px solid var(--line);border-radius:12px;padding:12px 14px;background:rgba(10,15,30,.5)}
+.fact em{display:block;font-style:normal;font-size:11.5px;color:var(--sub);letter-spacing:.08em}
+.fact b{font-size:14px;font-weight:700}
+
+/* ---------- HKBA ---------- */
+.hkba{margin-top:30px;border:1px solid rgba(245,199,107,.25);border-radius:22px;overflow:hidden;background:linear-gradient(150deg,#101a30,#0a0f1e 60%)}
+.hkba .inner{display:grid;grid-template-columns:1fr 1fr}
+@media(max-width:860px){.hkba .inner{grid-template-columns:1fr}}
+.hkba .txt{padding:36px 32px}
+.hkba .badge{display:inline-block;font-size:11px;letter-spacing:.3em;color:var(--gold);border:1px solid rgba(245,199,107,.4);border-radius:99px;padding:4px 14px;margin-bottom:14px}
+.hkba h3{font-size:24px;font-weight:800;margin-bottom:6px}
+.hkba .en{color:var(--sub);font-size:13px;margin-bottom:16px}
+.hkba ul{list-style:none;margin:14px 0 20px}
+.hkba li{font-size:14px;color:#c3d2ef;padding-left:22px;position:relative;margin-bottom:8px}
+.hkba li::before{content:"◆";position:absolute;left:0;color:var(--gold);font-size:10px;top:5px}
+.hkba a.org{color:var(--gold);text-decoration:none;font-size:13px;border-bottom:1px dashed rgba(245,199,107,.5)}
+.hkba .visual{position:relative;min-height:280px;background:radial-gradient(circle at 50% 45%,rgba(245,199,107,.14),transparent 60%)}
+.hkba .visual svg{position:absolute;inset:0;width:100%;height:100%}
+
+/* ---------- partners ---------- */
+.logo-wall{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:30px}
+@media(max-width:860px){.logo-wall{grid-template-columns:repeat(2,1fr)}}
+.plogo{border:1px solid var(--line);border-radius:16px;background:rgba(13,20,36,.7);padding:20px 14px;display:flex;flex-direction:column;align-items:center;gap:10px;transition:transform .3s,border-color .3s,box-shadow .3s;position:relative;overflow:hidden}
+.plogo:hover{transform:translateY(-5px);border-color:rgba(34,211,238,.45);box-shadow:0 12px 34px rgba(34,211,238,.12)}
+.plogo .mono{width:52px;height:52px;border-radius:14px;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:19px;color:#fff;letter-spacing:.02em;box-shadow:0 6px 18px rgba(0,0,0,.4)}
+.plogo b{font-size:13.5px;font-weight:700}
+.plogo span{font-size:11px;color:var(--sub)}
+.plogo .rel{position:absolute;top:10px;right:10px;font-size:10px;color:var(--cyan);opacity:.75}
+
+/* ---------- timeline ---------- */
+.timeline{margin-top:36px;position:relative;padding-left:26px}
+.timeline::before{content:"";position:absolute;left:7px;top:6px;bottom:6px;width:2px;background:linear-gradient(180deg,var(--cyan),var(--violet),transparent)}
+.tl-item{position:relative;margin-bottom:26px;border:1px solid var(--line);border-radius:16px;background:var(--card);padding:20px 22px;transition:transform .3s,border-color .3s}
+.tl-item:hover{transform:translateX(6px);border-color:rgba(139,92,246,.4)}
+.tl-item::before{content:"";position:absolute;left:-25px;top:26px;width:12px;height:12px;border-radius:50%;background:var(--bg);border:3px solid var(--cyan);box-shadow:0 0 12px rgba(34,211,238,.7)}
+.tl-item .when{font-size:12px;color:var(--cyan);letter-spacing:.1em}
+.tl-item h4{font-size:17px;font-weight:800;margin:4px 0 2px}
+.tl-item .role{font-size:13px;color:var(--violet);font-weight:600;margin-bottom:8px}
+.tl-item p{font-size:13.5px;color:#b9c9ea}
+.tl-item .achv{margin-top:10px;font-size:12.5px;color:var(--gold);border-top:1px dashed var(--line);padding-top:8px}
+
+/* ---------- AI projects ---------- */
+.proj-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:30px}
+@media(max-width:860px){.proj-grid{grid-template-columns:1fr}}
+.proj{border:1px solid var(--line);border-radius:18px;background:linear-gradient(165deg,rgba(13,20,36,.95),rgba(10,15,30,.55));padding:22px;position:relative;overflow:hidden;transition:transform .3s,border-color .3s}
+.proj:hover{transform:translateY(-5px);border-color:rgba(34,211,238,.4)}
+.proj::before{content:"";position:absolute;top:0;left:0;right:0;height:2px;background:var(--grad);opacity:.7}
+.proj .top{display:flex;justify-content:space-between;align-items:flex-start;gap:10px}
+.proj h4{font-size:16.5px;font-weight:800}
+.proj .when{font-size:11px;color:var(--sub);white-space:nowrap}
+.proj p{font-size:13px;color:#b9c9ea;margin:8px 0 12px}
+.proj .metric{font-size:12.5px;color:var(--gold);margin-bottom:10px}
+.proj .stack{display:flex;flex-wrap:wrap;gap:6px}
+.proj .stack i{font-style:normal;font-size:10.5px;color:var(--cyan);border:1px solid rgba(34,211,238,.3);border-radius:6px;padding:2px 8px}
+
+/* ---------- photos ---------- */
+.photo-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:30px}
+@media(max-width:860px){.photo-grid{grid-template-columns:repeat(2,1fr)}}
+.photo{position:relative;border-radius:16px;overflow:hidden;border:1px solid var(--line);aspect-ratio:1;cursor:zoom-in}
+.photo img{width:100%;height:100%;object-fit:cover;transition:transform .6s cubic-bezier(.2,.7,.2,1)}
+.photo:hover img{transform:scale(1.08)}
+.photo .cap{position:absolute;left:0;right:0;bottom:0;padding:26px 12px 10px;font-size:11.5px;color:#dbe7ff;background:linear-gradient(180deg,transparent,rgba(3,5,10,.85))}
+#lightbox{position:fixed;inset:0;z-index:99;background:rgba(3,5,10,.92);display:none;align-items:center;justify-content:center;padding:30px}
+#lightbox.open{display:flex}
+#lightbox img{max-width:100%;max-height:100%;border-radius:12px}
+#lightbox .x{position:absolute;top:20px;right:26px;font-size:30px;color:#fff;cursor:pointer;opacity:.8}
+
+/* ---------- contact ---------- */
+.contact-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:30px}
+@media(max-width:860px){.contact-grid{grid-template-columns:repeat(2,1fr)}}
+.contact{display:flex;align-items:center;gap:14px;border:1px solid var(--line);border-radius:16px;background:var(--card);padding:18px;text-decoration:none;color:var(--text);transition:transform .3s,border-color .3s}
+.contact:hover{transform:translateY(-4px);border-color:rgba(34,211,238,.4)}
+.contact .ic{width:42px;height:42px;border-radius:12px;background:rgba(34,211,238,.1);display:flex;align-items:center;justify-content:center;color:var(--cyan);flex-shrink:0}
+.contact .ic svg{width:20px;height:20px}
+.contact b{font-size:14px;display:block}
+.contact span{font-size:12px;color:var(--sub)}
+footer{padding:50px 0 90px;text-align:center;color:var(--sub);font-size:12px}
+footer .vision{max-width:520px;margin:0 auto 16px;font-size:13px;color:#b9c9ea;border:1px solid var(--line);border-radius:14px;padding:16px 20px;background:rgba(13,20,36,.5)}
+/* 首屏下滑提示 */
+.scroll-hint{position:absolute;bottom:18px;left:50%;transform:translateX(-50%);color:var(--sub);animation:hint 2s ease-in-out infinite}
+.scroll-hint svg{width:22px;height:22px}
+@keyframes hint{0%,100%{transform:translate(-50%,0);opacity:.5}50%{transform:translate(-50%,8px);opacity:1}}
+/* 移动端浮动联系按钮：核心动作一步可达 */
+.fab{position:fixed;right:16px;bottom:calc(16px + env(safe-area-inset-bottom));z-index:60;width:52px;height:52px;border-radius:50%;background:var(--grad);display:none;align-items:center;justify-content:center;box-shadow:0 8px 24px rgba(34,211,238,.4);color:#04121a;text-decoration:none}
+.fab svg{width:22px;height:22px}
+@media(max-width:720px){.fab{display:flex}}
+
+/* ---------- 虚拟人连线 ---------- */
+.connect-cta{margin-top:20px;display:flex;flex-direction:column;align-items:center;gap:8px}
+.btn.live{background:linear-gradient(120deg,#f5c76b,#e8853d);color:#1a1205;box-shadow:0 8px 30px rgba(245,199,107,.35)}
+.live-ring{position:absolute;inset:28px;border-radius:50%;border:2px solid rgba(52,211,153,.9);pointer-events:none;opacity:0;transition:opacity .4s}
+.avatar-stage.live .live-ring{opacity:1;animation:livering 1.8s ease-out infinite}
+@keyframes livering{0%{transform:scale(1);opacity:.9}100%{transform:scale(1.35);opacity:0}}
+.avatar-stage.live .ring.r1{animation-duration:2.5s}
+.live-bar{display:none;margin-top:14px;border:1px solid rgba(52,211,153,.4);border-radius:12px;background:rgba(6,26,20,.7);padding:10px 16px;font-size:13px;color:#7ef0c1;align-items:center;gap:10px}
+.live-bar.on{display:flex}
+.live-bar .dot{width:8px;height:8px;border-radius:50%;background:#34d399;box-shadow:0 0 10px #34d399;animation:pulse 1.2s infinite}
+.live-bar b{font-variant-numeric:tabular-nums}
+
+/* 支付弹层 */
+.modal-mask{position:fixed;inset:0;z-index:80;background:rgba(3,5,10,.8);backdrop-filter:blur(6px);display:none;align-items:center;justify-content:center;padding:20px}
+.modal-mask.open{display:flex}
+.modal{width:100%;max-width:430px;max-height:90svh;overflow-y:auto;border:1px solid var(--line);border-radius:20px;background:linear-gradient(165deg,#101828,#0a0f1e);padding:26px}
+.modal .m-hd{display:flex;justify-content:space-between;align-items:center;margin-bottom:6px}
+.modal .m-hd b{font-size:17px}
+.modal .m-x{cursor:pointer;color:var(--sub);background:none;border:none;font-size:22px;line-height:1}
+.modal .m-sub{font-size:12.5px;color:var(--sub);margin-bottom:16px}
+.min-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-bottom:16px}
+.min-btn{border:1px solid var(--line);border-radius:12px;background:rgba(13,20,36,.7);color:var(--text);padding:12px 4px;cursor:pointer;text-align:center;transition:border-color .2s,background .2s}
+.min-btn b{display:block;font-size:18px;color:var(--gold)}
+.min-btn span{font-size:11px;color:var(--sub)}
+.min-btn.sel{border-color:var(--gold);background:rgba(245,199,107,.12)}
+.pay-addr{border:1px dashed rgba(245,199,107,.45);border-radius:12px;padding:14px;margin-bottom:14px;background:rgba(245,199,107,.05)}
+.pay-addr .lbl{font-size:11px;color:var(--sub);letter-spacing:.08em;margin-bottom:6px}
+.pay-addr .addr{font-size:12px;word-break:break-all;color:var(--gold);font-family:ui-monospace,monospace}
+.pay-addr .meta{display:flex;justify-content:space-between;font-size:12px;color:#c3d2ef;margin-top:8px}
+.copy-btn{margin-top:10px;width:100%;border:1px solid rgba(34,211,238,.4);background:rgba(34,211,238,.1);color:var(--cyan);border-radius:10px;padding:9px;font-size:13px;cursor:pointer}
+.modal input.tx{width:100%;border:1px solid var(--line);border-radius:10px;background:rgba(5,8,16,.6);color:var(--text);padding:11px 12px;font-size:12.5px;font-family:ui-monospace,monospace;margin-bottom:10px}
+.modal input.tx:focus{outline:none;border-color:var(--cyan)}
+.verify-btn{width:100%;border:none;border-radius:12px;padding:13px;font-size:14.5px;font-weight:700;background:var(--grad);color:#04121a;cursor:pointer}
+.verify-btn:disabled{opacity:.5;cursor:default}
+.pay-msg{margin-top:12px;font-size:12.5px;min-height:1.5em;color:var(--sub)}
+.pay-msg.err{color:#f87171}.pay-msg.ok{color:#34d399}
+.pay-note{margin-top:14px;font-size:11px;color:#66779a;line-height:1.6}
+/* 语音按钮 */
+.mic-btn{display:inline-flex;align-items:center;gap:6px;font-size:12.5px;color:var(--gold);border:1px solid rgba(245,199,107,.4);border-radius:99px;padding:6px 13px;cursor:pointer;background:transparent}
+.mic-btn.listening{background:rgba(245,199,107,.15);animation:pulse 1s infinite}
+.mic-btn svg{width:13px;height:13px}
+</style>
+</head>
+<body>
+<canvas id="stars"></canvas>
+
+<nav class="top">
+  <div class="inner">
+    <div class="brand">JETTY LEE · 数字分身</div>
+    <div class="links">
+      <a href="#about">关于我</a><a href="#hkba">区块链协会</a><a href="#partners">合作伙伴</a>
+      <a href="#career">职业旅程</a><a href="#ai">AI 项目</a><a href="#photos">照片</a><a href="#contact">联系</a>
+    </div>
+  </div>
+</nav>
+
+<!-- ============ HERO / 虚拟人 ============ -->
+<header class="hero">
+  <div class="wrap hero-grid">
+    <div class="avatar-stage" id="avatarStage">
+      <div class="ring r3"></div><div class="ring r1"></div><div class="ring r2"></div>
+      <div class="avatar-frame" id="avatarFrame">
+        <img src="images/jetty.jpeg" alt="李小东 Jetty Lee">
+        <div class="holo"></div><div class="scanline"></div>
+      </div>
+      <div class="live-ring"></div>
+      <div class="status-chip"><span class="dot"></span><span id="statusText">AI 分身在线 · Digital Twin v2</span></div>
+    </div>
+    <div class="hero" id="heroText">
+      <div class="kicker">AI-Powered Digital Twin</div>
+      <h1>你好，我是 <span class="grad">李小东</span><br>Jetty Lee</h1>
+      <div class="titles">
+        <span>香港区块链协会副会长</span><span>RWA 专家</span><span>AI + Web3 技术专家</span><span>连续创业者</span>
+      </div>
+      <div class="typeline"><span id="typeTarget"></span><span class="caret"></span><span class="wave" id="wave"><i></i><i></i><i></i><i></i><i></i></span></div>
+      <div class="cta">
+        <a class="btn primary" href="#contact"><svg class="icn" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/></svg> 交换名片</a>
+        <button class="btn live" id="connectBtn"><svg class="icn" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 3 14h7l-1 8 11-12h-8l1-6z"/></svg> 连线虚拟人 · 1U/分钟</button>
+      </div>
+      <div class="live-bar" id="liveBar"><span class="dot"></span> 虚拟人连线中 · 剩余 <b id="liveClock">--:--</b><span style="margin-left:auto;cursor:pointer" id="hangupBtn">结束</span></div>
+      <div class="twin" id="twinBox">
+        <div class="hd"><svg class="icn" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color:var(--cyan)"><rect x="4" y="8" width="16" height="12" rx="2"/><path d="M12 8V4M8 4h8"/><circle cx="9" cy="13" r="1" fill="currentColor"/><circle cx="15" cy="13" r="1" fill="currentColor"/><path d="M9 17h6"/></svg> <b>Jetty 数字分身</b> · 点下面任意问题，让我亲自「说」给你听</div>
+        <div class="a"><span id="twinAnswer">我是 Jetty 的 AI 分身，基于他 12 年的职业经历、AI 项目与行业洞察构建。随便问我点什么吧。</span></div>
+        <div class="chips" id="chipRow"></div>
+        <div style="margin-top:10px;display:flex;gap:8px;align-items:center">
+          <button class="mic-btn" id="micBtn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a3 3 0 0 0-3 3v6a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3z"/><path d="M19 10v1a7 7 0 0 1-14 0v-1M12 18v4M8 22h8"/></svg> 按住语音问我</button>
+          <span style="font-size:11px;color:var(--sub)" id="voiceHint">支持中文语音 · 连线后虚拟人语音作答</span>
+        </div>
+      </div>
+    </div>
+    <div class="scroll-hint"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></div>
+  </div>
+</header>
+
+<div class="wrap">
+
+  <!-- ============ 数据 ============ -->
+  <section id="stats">
+    <div class="stats">
+      <div class="stat reveal"><b><span class="cnt" data-to="12">0</span>年</b><span>全栈开发经验</span></div>
+      <div class="stat reveal"><b><span class="cnt" data-to="8">0</span>+</b><span>AI 创业项目</span></div>
+      <div class="stat reveal"><b>亿级</b><span>金融交易系统设计</span></div>
+      <div class="stat reveal"><b><span class="cnt" data-to="30">0</span>+</b><span>品牌 GEO 服务</span></div>
+    </div>
+  </section>
+
+  <!-- ============ 关于我 ============ -->
+  <section id="about">
+    <div class="kicker reveal">About</div>
+    <h2 class="sec reveal">关于我</h2>
+    <p class="secsub reveal">从华为、新浪的工程师，到金融科技创业者，再到 AI + Web3 的探索者。</p>
+    <div class="about-grid">
+      <div class="card reveal">
+        <p>你好，我是李小东（Jetty Lee），来自湖南，2011 年起定居深圳。我曾在华为、新浪彩票等知名公司担任全栈工程师，拥有 12 年工作经验。2017 年起在金融科技和区块链领域创业，从 0 到 1 组建技术团队、打造多个金融科技系统，服务过招商证券、国信证券、第一创业证券等顶级券商。</p>
+        <p style="margin-top:12px">目前专注于 AI + Web3 技术研究与应用，包括 RWA 代币化架构、链上交易与数据追踪、AI 大模型工程化落地。同时担任香港区块链协会副会长，推动行业技术标准与生态建设，并带领团队打造 FoxAI 机器人与 AI 定制化解决方案。</p>
+        <div class="tags">
+          <i class="hot">ENFP</i><i class="hot">英语工作交流</i><i>唱歌</i><i>跑步</i><i>篮球</i><i>羽毛球</i><i>热爱帮助他人</i>
+        </div>
+      </div>
+      <div class="card reveal">
+        <div class="facts">
+          <div class="fact"><em>姓名</em><b>李小东 / Jetty Lee</b></div>
+          <div class="fact"><em>坐标</em><b>深圳 · 中国</b></div>
+          <div class="fact"><em>行业职务</em><b>香港区块链协会副会长</b></div>
+          <div class="fact"><em>技术栈</em><b>Java / Solidity / LLM</b></div>
+          <div class="fact"><em>创业方向</em><b>RWA · AI Agent · Web3</b></div>
+          <div class="fact"><em>管理经验</em><b>5 年技术团队管理</b></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 香港区块链协会 ============ -->
+  <section id="hkba">
+    <div class="kicker reveal">Hong Kong Blockchain Association</div>
+    <h2 class="sec reveal">香港区块链协会 · 副会长</h2>
+    <p class="secsub reveal">推动行业技术标准，连接内地与香港的 Web3 生态。</p>
+    <div class="hkba reveal">
+      <div class="inner">
+        <div class="txt">
+          <span class="badge">SINCE 2023.06 · VICE PRESIDENT</span>
+          <h3>香港区块链协会</h3>
+          <div class="en">Hong Kong Blockchain Association — Vice President</div>
+          <ul>
+            <li>担任协会副会长，推动区块链行业技术标准与最佳实践规范制定</li>
+            <li>主导 RWA 代币化架构设计：链下确权、合规链路、链上凭证</li>
+            <li>组织技术交流活动，促进大湾区与香港 Web3 生态建设</li>
+            <li>推动 AI + Web3 技术融合与智能化交易系统落地</li>
+            <li>负责链上交易监控、数据追踪与安全防护体系搭建</li>
+          </ul>
+          <a class="org" href="https://hongkongblockchain.org/" target="_blank" rel="noopener"><svg class="icn" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg> hongkongblockchain.org</a>
+        </div>
+        <div class="visual" aria-hidden="true">
+          <svg viewBox="0 0 400 300" fill="none">
+            <g stroke="rgba(245,199,107,.35)" stroke-width="1">
+              <path d="M200 40 300 95v110L200 260 100 205V95Z"/>
+              <path d="M200 90 258 122v66l-58 33-58-33v-66Z" stroke="rgba(34,211,238,.4)"/>
+              <path d="M200 40v50M300 95l-42 27M300 205l-42-27M200 260v-39M100 205l42-27M100 95l42 27"/>
+            </g>
+            <circle cx="200" cy="40" r="4" fill="#f5c76b"/><circle cx="300" cy="95" r="4" fill="#f5c76b"/>
+            <circle cx="300" cy="205" r="4" fill="#22d3ee"/><circle cx="200" cy="260" r="4" fill="#f5c76b"/>
+            <circle cx="100" cy="205" r="4" fill="#8b5cf6"/><circle cx="100" cy="95" r="4" fill="#22d3ee"/>
+            <circle cx="200" cy="155" r="6" fill="#f5c76b"><animate attributeName="r" values="6;9;6" dur="2.4s" repeatCount="indefinite"/></circle>
+            <text x="200" y="160" text-anchor="middle" fill="#04121a" font-size="11" font-weight="800">HKBA</text>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 合作伙伴 ============ -->
+  <section id="partners">
+    <div class="kicker reveal">Partners</div>
+    <h2 class="sec reveal">合作过的企业与机构</h2>
+    <p class="secsub reveal">从顶级券商到科技巨头 —— 曾服务与合作的部分机构。</p>
+    <div class="logo-wall" id="logoWall"></div>
+  </section>
+
+  <!-- ============ 职业旅程 ============ -->
+  <section id="career">
+    <div class="kicker reveal">Career</div>
+    <h2 class="sec reveal">职业旅程</h2>
+    <p class="secsub reveal">12 年，从工程师到创业者，再到行业推动者。</p>
+    <div class="timeline">
+      <div class="tl-item reveal"><span class="when">2024.01 — 至今</span><h4>香港区块链协会 & 独立技术顾问</h4><div class="role">副会长 / AI+Web3 技术专家</div><p>主导 RWA 代币化架构设计，深度研究 AI+Web3 技术融合，负责链上交易监控与安全体系，带领团队开发 FoxAI 机器人并提供 AI 定制化解决方案。</p><div class="achv"><svg class="icn" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 21h8M12 17v4M7 4h10v5a5 5 0 0 1-10 0V4z"/><path d="M7 6H4a2 2 0 0 0 2 5h1M17 6h3a2 2 0 0 1-2 5h-1"/></svg> 沉淀可复用的 RWA 与 AI 工程化方法论，推动行业技术标准建设</div></div>
+      <div class="tl-item reveal"><span class="when">2023.06 — 至今</span><h4>香港区块链协会</h4><div class="role">副会长</div><p>参与制定行业技术标准和最佳实践规范，组织技术交流活动，推动 Web3 技术在实际场景中的应用落地。</p><div class="achv"><svg class="icn" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 21h8M12 17v4M7 4h10v5a5 5 0 0 1-10 0V4z"/><path d="M7 6H4a2 2 0 0 0 2 5h1M17 6h3a2 2 0 0 1-2 5h-1"/></svg> hongkongblockchain.org</div></div>
+      <div class="tl-item reveal"><span class="when">2017.05 — 2024.01</span><h4>深圳市链方科技有限公司 / vuebi（新加坡）</h4><div class="role">产品总监 / VP</div><p>负责产品需求从分析到落地，用户行为与数据分析，对接券商客户需求。金融产品经验居多，对金融行业高度敏感。</p><div class="achv"><svg class="icn" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 21h8M12 17v4M7 4h10v5a5 5 0 0 1-10 0V4z"/><path d="M7 6H4a2 2 0 0 0 2 5h1M17 6h3a2 2 0 0 1-2 5h-1"/></svg> 谈下华南理工大学、第一创业证券等多个订单；交付华泰证券、安信证券、中信建投等项目</div></div>
+      <div class="tl-item reveal"><span class="when">2016.06 — 2017.05</span><h4>深圳市蘑菇财富技术有限公司</h4><div class="role">技术总监</div><p>负责前端用户体验、前端技术研究与游戏化产品开发，服务多家券商。</p><div class="achv"><svg class="icn" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 21h8M12 17v4M7 4h10v5a5 5 0 0 1-10 0V4z"/><path d="M7 6H4a2 2 0 0 0 2 5h1M17 6h3a2 2 0 0 1-2 5h-1"/></svg> 游戏化模拟炒股上线，交付招商证券、国信证券、银河证券等多个模拟炒股系统</div></div>
+      <div class="tl-item reveal"><span class="when">2012.12 — 2016.05</span><h4>新浪爱彩</h4><div class="role">Java 开发工程师</div><p>负责资讯系统核心开发，处理疑难杂症，带领小组学习前沿技术。</p><div class="achv"><svg class="icn" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 21h8M12 17v4M7 4h10v5a5 5 0 0 1-10 0V4z"/><path d="M7 6H4a2 2 0 0 0 2 5h1M17 6h3a2 2 0 0 1-2 5h-1"/></svg> 带领团队打造新浪彩票资讯频道</div></div>
+      <div class="tl-item reveal"><span class="when">2011.04 — 2012.12</span><h4>华为（软通动力）</h4><div class="role">高级 Java 工程师</div><p>数据库设计与前后端开发，调研新技术可行性，推行 SpringMVC 提升开发维护效率。</p><div class="achv"><svg class="icn" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 21h8M12 17v4M7 4h10v5a5 5 0 0 1-10 0V4z"/><path d="M7 6H4a2 2 0 0 0 2 5h1M17 6h3a2 2 0 0 1-2 5h-1"/></svg> 打造中国移动商业智能系统，支撑千亿级数据分析</div></div>
+    </div>
+  </section>
+
+  <!-- ============ AI 项目 ============ -->
+  <section id="ai">
+    <div class="kicker reveal">AI Projects</div>
+    <h2 class="sec reveal">AI 创业项目</h2>
+    <p class="secsub reveal">2026 年起密集出品的 AI 产品矩阵，覆盖输入法、视频译制、Agent 银行、交易、GEO 等方向。</p>
+    <div class="proj-grid" id="projGrid"></div>
+  </section>
+
+  <!-- ============ 照片墙 ============ -->
+  <section id="photos">
+    <div class="kicker reveal">Moments</div>
+    <h2 class="sec reveal">人物照片 · 精彩瞬间</h2>
+    <p class="secsub reveal">从香港金融科技周到越南岘港，从新浪年会舞台到 Web3 峰会现场。</p>
+    <div class="photo-grid">
+      <div class="photo reveal"><img src="images/photos/hk-fintech-week.jpg" alt="香港金融科技周"><div class="cap">香港金融科技周 · Hong Kong FinTech Week</div></div>
+      <div class="photo reveal"><img src="images/TonyTangAndJetty.JPG" alt="Web3 峰会"><div class="cap">全球首届 Web3+AI 产业峰会</div></div>
+      <div class="photo reveal"><img src="images/photos/danang-golden-bridge.jpg" alt="岘港金桥"><div class="cap">越南岘港 · 金桥（佛手桥）</div></div>
+      <div class="photo reveal"><img src="images/photos/hcmc-restaurant.jpg" alt="胡志明"><div class="cap">胡志明 · 网红餐厅</div></div>
+      <div class="photo reveal"><img src="images/photos/casual-selfie.jpg" alt="日常自拍"><div class="cap">日常 · 青涩自拍</div></div>
+      <div class="photo reveal"><img src="images/photos/20150130-新浪爱彩-408.jpeg" alt="新浪年会"><div class="cap">2015 新浪爱彩年会舞台</div></div>
+    </div>
+  </section>
+
+  <!-- ============ 联系我 ============ -->
+  <section id="contact">
+    <div class="kicker reveal">Contact</div>
+    <h2 class="sec reveal">与我联系</h2>
+    <p class="secsub reveal">新奇技术、RWA、AI 相关的合作、咨询、交流，都可以直接找我。</p>
+    <div class="contact-grid">
+      <a class="contact reveal" href="mailto:jetty.lee@icloud.com"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg></div><div><b>邮箱</b><span>jetty.lee@icloud.com</span></div></a>
+      <a class="contact reveal" href="https://x.com/jettyleex" target="_blank" rel="noopener"><div class="ic"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.9 2.1h3.7l-8.1 9.3L24 23h-7.5l-5.9-7.7L3.9 23H.2l8.7-9.9L0 1.1h7.7l5.3 7 6-6zm-1.3 18.8h2L6.6 3.3H4.4l13.2 17.6z"/></svg></div><div><b>X / Twitter</b><span>@jettyleex</span></div></a>
+      <a class="contact reveal" href="https://github.com/lixiaodong" target="_blank" rel="noopener"><div class="ic"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.55v-2.15c-3.2.7-3.87-1.36-3.87-1.36-.52-1.33-1.28-1.68-1.28-1.68-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.03 1.76 2.69 1.25 3.35.96.1-.75.4-1.25.72-1.54-2.55-.29-5.23-1.28-5.23-5.68 0-1.26.45-2.28 1.18-3.09-.12-.29-.51-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.78 0c2.2-1.49 3.16-1.18 3.16-1.18.63 1.59.24 2.76.12 3.05.74.81 1.18 1.83 1.18 3.09 0 4.41-2.69 5.38-5.25 5.67.41.35.77 1.05.77 2.12v3.14c0 .3.21.67.8.55A11.51 11.51 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5z"/></svg></div><div><b>GitHub</b><span>@lixiaodong</span></div></a>
+      <div class="contact reveal"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-8.5 8.5 8.5 8.5 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 8.5-8.5 8.38 8.38 0 0 1 8.5 8.5z"/></svg></div><div><b>微信</b><span>szchainfun</span></div></div>
+      <a class="contact reveal" href="https://hongkongblockchain.org/" target="_blank" rel="noopener"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></div><div><b>香港区块链协会</b><span>副会长</span></div></a>
+      <div class="contact reveal"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div><div><b>所在地</b><span>深圳 · 中国</span></div></div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="vision"><svg class="icn" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color:var(--gold)"><path d="M9 18h6M10 21h4M12 3a6 6 0 0 0-4 10.5c.8.8 1 1.5 1 2.5h6c0-1 .2-1.7 1-2.5A6 6 0 0 0 12 3z"/></svg> 我相信：<b>真实世界资产（RWA）× AI 原生交互 × 链上基础设施</b>，是未来 10 年最确定的技术主线。</div>
+    <div>© 2026 李小东 Jetty Lee · Digital Twin Resume v2</div>
+  </footer>
+</div>
+
+<div id="lightbox"><span class="x" onclick="this.parentNode.classList.remove('open')">×</span><img alt=""></div>
+
+<!-- ============ USDC 支付连线弹层 ============ -->
+<div class="modal-mask" id="payModal">
+  <div class="modal">
+    <div class="m-hd"><b><svg class="icn" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color:var(--gold)"><path d="M13 2 3 14h7l-1 8 11-12h-8l1-6z"/></svg> 连线 Jetty 虚拟人</b><button class="m-x" id="payClose">×</button></div>
+    <div class="m-sub">语音实时交互 · 按分钟计费 · USDC 支付 · 1 U = 1 分钟（约 ¥6）</div>
+    <div class="min-grid" id="minGrid">
+      <button class="min-btn sel" data-min="1"><b>1</b><span>分钟 · 1U</span></button>
+      <button class="min-btn" data-min="3"><b>3</b><span>分钟 · 3U</span></button>
+      <button class="min-btn" data-min="5"><b>5</b><span>分钟 · 5U</span></button>
+      <button class="min-btn" data-min="10"><b>10</b><span>分钟 · 10U</span></button>
+    </div>
+    <div class="pay-addr">
+      <div class="lbl">USDC 收款地址（Base 链）</div>
+      <div class="addr" id="payAddr">—</div>
+      <div class="meta"><span>应付金额</span><b id="payAmount" style="color:var(--gold)">1 USDC</b></div>
+      <button class="copy-btn" id="copyAddr">复制收款地址</button>
+    </div>
+    <input class="tx" id="txInput" placeholder="付款后粘贴交易哈希（0x...）" autocomplete="off" spellcheck="false">
+    <button class="verify-btn" id="verifyBtn">验证支付并连线</button>
+    <div class="pay-msg" id="payMsg"></div>
+    <div class="pay-note">支付说明：仅接受 Base 链 USDC；交易确认后自动开通对应时长。请勿从交易所直接提币到本地址以外的任何地址，付款前请核对地址。支付即代表同意本服务为 AI 数字分身演示交互。</div>
+  </div>
+</div>
+
+<a class="fab" href="#contact" aria-label="联系我"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-8.5 8.5 8.5 8.5 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 8.5-8.5 8.38 8.38 0 0 1 8.5 8.5z"/></svg></a>
+
+<script>
+/* ================= 粒子背景 ================= */
+(function(){
+  const cv=document.getElementById('stars'),ctx=cv.getContext('2d');
+  let W,H,ps=[],mouse={x:-999,y:-999};
+  const N=()=>Math.min(110,Math.floor(W*H/14000));
+  function resize(){W=cv.width=innerWidth;H=cv.height=innerHeight;
+    ps=Array.from({length:N()},()=>({x:Math.random()*W,y:Math.random()*H,
+      vx:(Math.random()-.5)*.4,vy:(Math.random()-.5)*.4,r:Math.random()*1.6+.5,
+      c:Math.random()<.5?'34,211,238':'139,92,246'}));}
+  addEventListener('resize',resize);resize();
+  addEventListener('pointermove',e=>{mouse.x=e.clientX;mouse.y=e.clientY});
+  (function tick(){
+    ctx.clearRect(0,0,W,H);
+    for(const p of ps){
+      p.x+=p.vx;p.y+=p.vy;
+      if(p.x<0||p.x>W)p.vx*=-1; if(p.y<0||p.y>H)p.vy*=-1;
+      const dx=p.x-mouse.x,dy=p.y-mouse.y,d=Math.hypot(dx,dy);
+      if(d<120){p.x+=dx/d*1.2;p.y+=dy/d*1.2;}
+      ctx.beginPath();ctx.arc(p.x,p.y,p.r,0,7);ctx.fillStyle=`rgba(${p.c},.75)`;ctx.fill();
+    }
+    for(let i=0;i<ps.length;i++)for(let j=i+1;j<ps.length;j++){
+      const a=ps[i],b=ps[j],d=Math.hypot(a.x-b.x,a.y-b.y);
+      if(d<130){ctx.beginPath();ctx.moveTo(a.x,a.y);ctx.lineTo(b.x,b.y);
+        ctx.strokeStyle=`rgba(90,140,240,${(1-d/130)*.22})`;ctx.lineWidth=1;ctx.stroke();}
+    }
+    requestAnimationFrame(tick);
+  })();
+})();
+
+/* ================= 头像轨道粒子 ================= */
+(function(){
+  const stage=document.getElementById('avatarStage');
+  [[0,6.5,'d1'],[Math.PI,9,'d2']].forEach(([off,dur,cls])=>{
+    const d=document.createElement('div');d.className='orbit-dot '+cls;stage.appendChild(d);
+    let t0=performance.now();
+    (function orb(t){
+      const a=off+(t-t0)/1000*(Math.PI*2)/(dur*2),R=172;
+      d.style.left=(160+Math.cos(a)*R-4)+'px';d.style.top=(160+Math.sin(a)*R-4)+'px';
+      requestAnimationFrame(orb);
+    })(t0);
+  });
+})();
+
+/* ================= 打字机 + 数字人问答 ================= */
+const heroLines=[
+  '12 年全栈老兵，亿级金融交易系统设计者。',
+  '香港区块链协会副会长，RWA 代币化架构师。',
+  '2026 年做了 8 个 AI 产品：输入法、视频译制、Agent 银行……',
+  '相信 RWA × AI × 链上基础设施是未来 10 年的主线。'
+];
+function typewrite(el,text,speed,done){
+  el.textContent='';let i=0;clearInterval(el._tw);
+  el._tw=setInterval(()=>{el.textContent+=text[i++]??'';if(i>=text.length){clearInterval(el._tw);done&&done();}},speed);
+}
+(function heroLoop(){
+  const el=document.getElementById('typeTarget');let idx=0;
+  (function next(){
+    document.getElementById('heroText').classList.add('speaking');
+    typewrite(el,heroLines[idx],55,()=>{
+      document.getElementById('heroText').classList.remove('speaking');
+      idx=(idx+1)%heroLines.length;setTimeout(next,2600);
+    });
+  })();
+})();
+
+const twinQA=[
+  {q:'你是谁？',a:'我是李小东（Jetty Lee），湖南人，定居深圳。曾在华为、新浪彩票做全栈工程师，2017 年起在金融科技与区块链领域创业，现在专注于 AI + Web3，同时担任香港区块链协会副会长。'},
+  {q:'擅长什么技术？',a:'Java / HTML / CSS / JS 十年以上功力，Solidity 5 年+，NodeJS、Python、C# 都在生产环境用过。近两年主攻 AI 大模型工程化：LLM Router、RAG、Agent、向量检索、多模型评测，以及链上数据追踪与 RWA 架构。'},
+  {q:'做过哪些 AI 项目？',a:'2026 年做了 8 个：妙言 AI 输入法、VoxOut 视频译制、Valuta Agent 银行接口、ClawEx 加密交易助手、GeoWorthy GEO 优化、原油舆情引擎、形象配方换装小程序、SaveMoneyAI 省钱助手。往下滑可以看到每一张卡片。'},
+  {q:'能合作什么？',a:'三类最对口：① RWA / Web3 系统架构与开发；② AI 大模型应用落地（Agent、RAG、多模型路由）；③ 金融科技系统（券商系统、撮合清算、量化信号）。微信 szchainfun，邮箱 jetty.lee@icloud.com，随时聊。'},
+  {q:'香港区块链协会是？',a:'香港区块链协会（hongkongblockchain.org）是推动香港 Web3 生态的行业组织。我 2023 年起担任副会长，主要负责技术标准、RWA 架构和行业交流活动。'},
+  {q:'技术之外的你？',a:'ENFP，热爱帮助他人。喜欢唱歌（上过新浪年会舞台）、跑步、篮球、羽毛球。英语可以作为工作语言，最近在越南和美国也有一些 AI 支付方向的合作探讨。'}
+];
+(function(){
+  const row=document.getElementById('chipRow'),ans=document.getElementById('twinAnswer'),box=document.getElementById('twinBox');
+  twinQA.forEach(({q,a})=>{
+    const b=document.createElement('button');b.className='chip';b.textContent=q;
+    b.onclick=()=>{
+      row.querySelectorAll('.chip').forEach(c=>c.disabled=true);
+      box.classList.add('speaking');
+      document.getElementById('statusText').textContent='AI 分身正在回答…';
+      typewrite(ans,a,26,()=>{
+        box.classList.remove('speaking');
+        document.getElementById('statusText').textContent=liveState.minutes>0?'虚拟人连线中 · 语音已开启':'AI 分身在线 · Digital Twin v2';
+        row.querySelectorAll('.chip').forEach(c=>c.disabled=false);
+      });
+      speak(a);
+    };
+    row.appendChild(b);
+  });
+})();
+
+/* ================= 合作伙伴 Logo 墙 ================= */
+const partners=[
+  ['华为','Huawei','曾任职 · 高级Java工程师','linear-gradient(135deg,#c7000b,#ff6a3d)','华'],
+  ['新浪爱彩','Sina aicai.com','曾任职 · 资讯系统核心开发','linear-gradient(135deg,#e6162d,#ff8200)','浪'],
+  ['中国移动','China Mobile','BICP 商业智能系统','linear-gradient(135deg,#0066b3,#00a0e9)','移'],
+  ['招商证券','CMS','模拟炒股系统交付','linear-gradient(135deg,#b01e24,#e63946)','招'],
+  ['国信证券','Guosen','模拟炒股系统交付','linear-gradient(135deg,#8c1d40,#c94f6d)','信'],
+  ['银河证券','CGS','模拟炒股系统交付','linear-gradient(135deg,#1a3c8f,#3f6fd1)','银'],
+  ['华泰证券','HTSC','项目开发交付','linear-gradient(135deg,#0b3d91,#2f6fdd)','泰'],
+  ['安信证券','Essence','项目开发交付','linear-gradient(135deg,#b8860b,#f5c76b)','安'],
+  ['中信建投','CSC','项目开发交付','linear-gradient(135deg,#5b21b6,#8b5cf6)','投'],
+  ['第一创业证券','FCSC','云投顾平台 · 订单客户','linear-gradient(135deg,#065f46,#34d399)','创'],
+  ['华南理工大学','SCUT','订单客户','linear-gradient(135deg,#7c2d12,#ea580c)','理'],
+  ['FoxAI','AI 机器人','带队研发 · AI 定制方案','linear-gradient(135deg,#0e7490,#22d3ee)','F']
+];
+document.getElementById('logoWall').innerHTML=partners.map(([n,en,rel,g,m])=>
+  `<div class="plogo reveal"><span class="rel">✓ 合作</span><div class="mono" style="background:${g}">${m}</div><b>${n}</b><span>${en}</span><span style="color:#7dd3fc;font-size:10.5px">${rel}</span></div>`
+).join('');
+
+/* ================= AI 项目卡片 ================= */
+const projects=[
+  ['妙言 AI 输入法','2026.04 至今','AI 情商输入法：恋爱、破冰、商务沟通高情商回复；Android + iOS + Spring Boot 三端约 10 万行代码，多模型路由 + RAG + Agent。','已上线 Google Play 与国内商店 · v1.7.41',['LLM Router','RAG','Kotlin','Swift','Spring Boot']],
+  ['VoxOut 声出 · AI 视频译制','2026.06 至今','上传视频一键译成 10 种语言并保留原音色：人声分离 → Whisper 转写 → 说话人识别 → Claude 翻译 → 声音克隆 → 混音字幕。','已上线 · 181 个自动化测试',['Whisper','Voice Clone','FastAPI','Stripe']],
+  ['Valuta · AI Agent 银行接口','2026.09 至今','面向 AI Agent 的瑞士 BaaS 接入层，让 Claude / ChatGPT / Cursor 直接发起支付：自研 MCP Server + CLI + 插件。','打通 3 大 AI 平台原生支付能力',['MCP','BaaS','TypeScript','PostgreSQL']],
+  ['ClawEx · AI 加密交易助手','2026.05 - 07','一句话下单：自然语言 → LLM 意图解析 → 风控确认卡 → 多交易所执行；规则引擎算数、LLM 只做研判。','',['LLM Agent','CCXT','React','Node.js']],
+  ['GeoWorthy · GEO 优化','2026.07 至今','帮品牌在 ChatGPT 等 AI 回答中被正确提及：8 阶段交付 SOP + 批量体检工具 + Cloudflare Worker 线索推送。','已服务 30+ 品牌官网 · geoworthy.com',['GEO','LLM SEO','Cloudflare']],
+  ['原油期货 AI 舆情引擎','2026.04','多源公开情报采集（RSS / OPEC / EIA），Claude / GPT 结构化分析输出方向、置信度、紧急度，供量化引擎调用。','',['LLM','OSINT','Quant','FastAPI']],
+  ['形象配方 · AI 穿搭小程序','2026.06','上传照片，AI 选品并生成换装效果图，一键跳转购买；豆包 Seedream / SeedEdit 图像合成。','',['AIGC','Image Edit','小程序','FastAPI']],
+  ['SaveMoneyAI · 省钱 Agent','2026.03','微信里的 AI 比价省钱助手：Claude 理解购物意图，接入 CPS 联盟比价返佣，公众号自动回复。','',['AI Agent','Claude','Vue3','Serverless']]
+];
+document.getElementById('projGrid').innerHTML=projects.map(([n,w,d,m,s])=>
+  `<div class="proj reveal"><div class="top"><h4>${n}</h4><span class="when">${w}</span></div><p>${d}</p>${m?`<div class="metric"><svg class="icn" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 21h8M12 17v4M7 4h10v5a5 5 0 0 1-10 0V4z"/><path d="M7 6H4a2 2 0 0 0 2 5h1M17 6h3a2 2 0 0 1-2 5h-1"/></svg> ${m}</div>`:''}<div class="stack">${(s||[]).map(x=>`<i>${x}</i>`).join('')}</div></div>`
+).join('');
+
+/* ================= USDC 支付 + 虚拟人连线 ================= */
+/* 收款地址已确认为 Jetty 的 Base 链钱包（USDC）；如需更换只改 wallet 字段 */
+const PAY = {
+  wallet: '0xdBE52605186f7679D2F6034E4E1f79E8184dD746', /* Base 链收款地址（USDC） */
+  chainId: 8453,                                     /* Base mainnet */
+  chainName: 'Base',
+  usdc: '0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913',/* Base 官方 USDC 合约 */
+  rpc: 'https://mainnet.base.org',                   /* 公共 RPC（机密付费节点禁止进前端） */
+  pricePerMin: 1,                                    /* 1 USDC / 分钟 ≈ ¥6 */
+  txMaxAgeSec: 24*3600,                              /* 只接受 24h 内的交易 */
+};
+const TRANSFER_SIG = '0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef';
+const liveState = { minutes:0, timer:null, speak:true };
+
+function rpcCall(method, params){
+  return fetch(PAY.rpc,{method:'POST',headers:{'Content-Type':'application/json'},
+    body:JSON.stringify({jsonrpc:'2.0',id:1,method,params})}).then(r=>r.json());
+}
+
+(function(){
+  const modal=document.getElementById('payModal'),msg=document.getElementById('payMsg');
+  const addrEl=document.getElementById('payAddr'),amtEl=document.getElementById('payAmount');
+  const txInput=document.getElementById('txInput'),verifyBtn=document.getElementById('verifyBtn');
+  let minutes=1;
+  addrEl.textContent=PAY.wallet;
+  addrEl.title=PAY.wallet;
+
+  document.getElementById('connectBtn').onclick=()=>{
+    if(liveState.minutes>0){document.getElementById('twinBox').scrollIntoView({behavior:'smooth'});return;}
+    modal.classList.add('open');
+  };
+  document.getElementById('payClose').onclick=()=>modal.classList.remove('open');
+  modal.addEventListener('click',e=>{if(e.target===modal)modal.classList.remove('open')});
+
+  document.getElementById('minGrid').addEventListener('click',e=>{
+    const b=e.target.closest('.min-btn');if(!b)return;
+    document.querySelectorAll('.min-btn').forEach(x=>x.classList.remove('sel'));
+    b.classList.add('sel');minutes=+b.dataset.min;
+    amtEl.textContent=`${minutes*PAY.pricePerMin} USDC`;
+  });
+
+  document.getElementById('copyAddr').onclick=async function(){
+    try{await navigator.clipboard.writeText(PAY.wallet);this.textContent='已复制 ✓';}
+    catch{this.textContent='请长按地址手动复制';}
+    setTimeout(()=>this.textContent='复制收款地址',2000);
+  };
+
+  function setMsg(t,cls){msg.textContent=t;msg.className='pay-msg '+(cls||'');}
+
+  verifyBtn.onclick=async ()=>{
+    const tx=txInput.value.trim();
+    if(!/^0x[0-9a-fA-F]{64}$/.test(tx)){setMsg('交易哈希格式不正确（0x 开头 64 位十六进制）','err');return;}
+    const used=JSON.parse(localStorage.getItem('jetty_used_tx')||'[]');
+    if(used.includes(tx.toLowerCase())){setMsg('该交易已被使用过，请勿重复提交','err');return;}
+    verifyBtn.disabled=true;setMsg('正在链上验证交易…');
+    try{
+      const r1=await rpcCall('eth_getTransactionReceipt',[tx]);
+      const rcpt=r1.result;
+      if(!rcpt){setMsg('未找到该交易，请确认已在 Base 链上确认（等待约 5 秒后重试）','err');throw 'stop';}
+      if(rcpt.status!=='0x1'){setMsg('该交易在链上执行失败','err');throw 'stop';}
+      /* 防旧交易：检查区块时间 */
+      const r2=await rpcCall('eth_getBlockByNumber',[rcpt.blockNumber,false]);
+      const ts=parseInt(r2.result.timestamp,16);
+      if(Date.now()/1000-ts>PAY.txMaxAgeSec){setMsg('该交易超过 24 小时，无法用于本次连线','err');throw 'stop';}
+      /* 在 receipt logs 中找 USDC Transfer → 收款地址，金额需 >= 应付 */
+      const need=BigInt(minutes*PAY.pricePerMin)*1000000n; /* USDC 6 位精度 */
+      const walletPad='0x000000000000000000000000'+PAY.wallet.slice(2).toLowerCase();
+      const hit=rcpt.logs.find(l=>
+        l.address.toLowerCase()===PAY.usdc.toLowerCase() &&
+        l.topics[0]===TRANSFER_SIG &&
+        l.topics[2].toLowerCase()===walletPad &&
+        BigInt(l.data)>=need
+      );
+      if(!hit){setMsg(`未找到向本地址支付 ≥${minutes*PAY.pricePerMin} USDC 的转账记录，请核对金额与链（Base）`,'err');throw 'stop';}
+      used.push(tx.toLowerCase());localStorage.setItem('jetty_used_tx',JSON.stringify(used));
+      setMsg('验证通过，正在接通…','ok');
+      setTimeout(()=>{modal.classList.remove('open');startLive(minutes);},900);
+    }catch(e){
+      if(e!=='stop')setMsg('网络验证失败，请稍后重试（或换用钱包内置浏览器）','err');
+    }finally{verifyBtn.disabled=false;}
+  };
+
+  function startLive(min){
+    liveState.minutes=min;
+    const stage=document.getElementById('avatarStage'),bar=document.getElementById('liveBar'),clock=document.getElementById('liveClock');
+    stage.classList.add('live');bar.classList.add('on');
+    document.getElementById('statusText').textContent='虚拟人连线中 · 语音已开启';
+    document.getElementById('voiceHint').textContent='连线模式：虚拟人将用语音回答你';
+    let left=min*60;
+    const tick=()=>{
+      const m=String(Math.floor(left/60)).padStart(2,'0'),s=String(left%60).padStart(2,'0');
+      clock.textContent=`${m}:${s}`;
+      if(left<=0){endLive();speak('本次连线时间已到，感谢体验。欢迎续时继续聊。');return;}
+      left--;liveState.timer=setTimeout(tick,1000);
+    };
+    tick();
+    speak(`你好，我是 Jetty 的虚拟人。${min} 分钟连线已开始，直接对我说话就行。`);
+    document.getElementById('twinBox').scrollIntoView({behavior:'smooth'});
+  }
+  function endLive(){
+    clearTimeout(liveState.timer);liveState.minutes=0;
+    document.getElementById('avatarStage').classList.remove('live');
+    document.getElementById('liveBar').classList.remove('on');
+    document.getElementById('statusText').textContent='AI 分身在线 · Digital Twin v2';
+    document.getElementById('voiceHint').textContent='支持中文语音 · 连线后虚拟人语音作答';
+  }
+  document.getElementById('hangupBtn').onclick=endLive;
+})();
+
+/* ================= 语音交互（Web Speech API） ================= */
+function speak(text){
+  if(!('speechSynthesis' in window))return;
+  if(!liveState.minutes)return; /* 未连线只文字显示 */
+  speechSynthesis.cancel();
+  const u=new SpeechSynthesisUtterance(text);
+  u.lang='zh-CN';u.rate=1.05;
+  const v=speechSynthesis.getVoices().find(v=>v.lang.startsWith('zh'));
+  if(v)u.voice=v;
+  const box=document.getElementById('heroText');
+  u.onstart=()=>box.classList.add('speaking');
+  u.onend=()=>box.classList.remove('speaking');
+  speechSynthesis.speak(u);
+}
+
+/* 意图匹配：关键词组命中 twinQA，未命中走兜底 */
+const INTENTS=[
+  {k:['价格','多少钱','收费','怎么付','付费'], a:'连线虚拟人按分钟计费，1 分钟 1 USDC，约人民币 6 元。点上方「连线虚拟人」按钮即可开始。'},
+  {k:['合作','报价','外包','接活','顾问','项目开发'], a:twinQA[3].a},
+  {k:['谁','介绍','背景'], a:twinQA[0].a},
+  {k:['技术','栈','擅长','会什么'], a:twinQA[1].a},
+  {k:['项目','作品','做过'], a:twinQA[2].a},
+  {k:['协会','区块链协会','hkba'], a:twinQA[4].a},
+  {k:['爱好','生活','兴趣','唱歌','运动'], a:twinQA[5].a},
+];
+function answerQuery(q){
+  const norm=q.toLowerCase();
+  const hit=INTENTS.find(t=>t.k.some(k=>norm.includes(k.toLowerCase())));
+  return (hit&&hit.a) || '这个问题我还在学习中。你可以问我：擅长什么技术、做过哪些 AI 项目、能合作什么，或者直接加微信 szchainfun 和真人聊。';
+}
+
+(function(){
+  const SR=window.SpeechRecognition||window.webkitSpeechRecognition;
+  const btn=document.getElementById('micBtn');
+  if(!SR){btn.style.display='none';document.getElementById('voiceHint').textContent='当前浏览器不支持语音识别，可点下方文字问题';return;}
+  const rec=new SR();rec.lang='zh-CN';rec.interimResults=false;rec.maxAlternatives=1;
+  let on=false;
+  btn.onclick=()=>{ if(on){rec.stop();return;} try{rec.start();}catch{} };
+  rec.onstart=()=>{on=true;btn.classList.add('listening');btn.lastChild.textContent=' 正在聆听，请说话…';};
+  rec.onend=()=>{on=false;btn.classList.remove('listening');btn.lastChild.textContent=' 按住语音问我';};
+  rec.onerror=()=>{document.getElementById('twinAnswer').textContent='没有听清，请再试一次（需要在系统弹窗中允许麦克风权限）。';};
+  rec.onresult=e=>{
+    const text=e.results[0][0].transcript;
+    document.getElementById('twinAnswer').textContent='你问：'+text;
+    const ans=answerQuery(text);
+    setTimeout(()=>{
+      typewrite(document.getElementById('twinAnswer'),ans,24,()=>{});
+      speak(ans);
+    },500);
+  };
+})();
+function revealEl(el){
+  if(el.classList.contains('in'))return;
+  el.classList.add('in');
+  el.querySelectorAll('.cnt').forEach(c=>{
+    if(c._done)return;c._done=1;const to=+c.dataset.to,t0=performance.now();
+    (function step(t){const p=Math.min(1,(t-t0)/1400);
+      c.textContent=Math.round(to*(1-Math.pow(1-p,3)));
+      if(p<1)requestAnimationFrame(step);})(t0);
+  });
+}
+function revealInView(){
+  document.querySelectorAll('.reveal:not(.in)').forEach(el=>{
+    const r=el.getBoundingClientRect();
+    if(r.top<innerHeight*0.92&&r.bottom>0)revealEl(el);
+  });
+}
+let ioWorked=false;
+function armReveal(){
+  if(document.body.classList.contains('io'))return;
+  document.body.classList.add('io');
+  const io=new IntersectionObserver(es=>es.forEach(e=>{
+    if(e.isIntersecting){ioWorked=true;revealEl(e.target);io.unobserve(e.target);}
+  }),{threshold:.15});
+  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+}
+/* 只在帧循环真正流动时才"武装"滚动动画（后台标签页/无动画环境保持默认可见） */
+let __frames=0;
+requestAnimationFrame(function __probe(){
+  __frames++;
+  if(__frames===3)armReveal();
+  if(__frames<240)requestAnimationFrame(__probe);
+});
+addEventListener('scroll',revealInView,{passive:true});
+addEventListener('resize',revealInView);
+addEventListener('load',revealInView);
+revealInView();
+/* 兜底：若 IO 从未回调，撤掉隐藏直接全量显示 */
+setTimeout(()=>{
+  if(!ioWorked){
+    document.body.classList.remove('io');
+    document.querySelectorAll('.reveal:not(.in)').forEach(revealEl);
+  }
+},2500);
+
+/* ================= 照片 lightbox ================= */
+const lb=document.getElementById('lightbox'),lbi=lb.querySelector('img');
+document.querySelectorAll('.photo img').forEach(img=>img.parentNode.addEventListener('click',()=>{
+  lbi.src=img.src;lb.classList.add('open');
+}));
+lb.addEventListener('click',e=>{if(e.target===lb)lb.classList.remove('open')});
+</script>
+</body>
+</html>

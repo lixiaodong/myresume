@@ -3,10 +3,10 @@
         xmlns:xhtml="http://www.w3.org/1999/xhtml"
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
 
-  <!-- Primary URL: 首页，多语言同 URL（客户端 JS 切换 zh/en） -->
+  <!-- Primary URL: 首页 = AI 数字分身（Digital Twin v2），多语言同 URL（客户端 JS 切换 zh/en） -->
   <url>
     <loc>https://www.jettylee.com/</loc>
-    <lastmod>2026-07-27</lastmod>
+    <lastmod>2026-11-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://www.jettylee.com/"/>
@@ -15,14 +15,22 @@
     <image:image>
       <image:loc>https://www.jettylee.com/images/jetty.jpeg</image:loc>
       <image:title>李小东 Jetty Lee</image:title>
-      <image:caption>李小东 Jetty Lee —— RWA · AI · Web3 技术专家，交易所 CTO，香港区块链协会副会长</image:caption>
+      <image:caption>李小东 Jetty Lee —— 香港区块链协会副会长，RWA · AI · Web3 技术专家，AI 数字分身（可对话、可付费连线虚拟人）</image:caption>
     </image:image>
+  </url>
+
+  <!-- 经典版简历（保留为回滚与 ATS 友好入口） -->
+  <url>
+    <loc>https://www.jettylee.com/index-classic.html</loc>
+    <lastmod>2026-11-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
 
   <!-- LLM-friendly summary (llms.txt) -->
   <url>
     <loc>https://www.jettylee.com/llms.txt</loc>
-    <lastmod>2026-07-27</lastmod>
+    <lastmod>2026-11-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>

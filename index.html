@@ -4,7 +4,35 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <title>李小东 Jetty Lee · AI 数字分身 | 香港区块链协会副会长</title>
-<meta name="description" content="李小东（Jetty Lee）— 香港区块链协会副会长、AI+Web3 技术专家、RWA 架构师、连续创业者。12 年全栈经验，亿级交易系统设计者。">
+<meta name="description" content="李小东（Jetty Lee）— 香港区块链协会副会长、AI+Web3 技术专家、RWA 架构师、连续创业者。12 年全栈经验、8 个 AI 创业项目、亿级交易系统设计者。官网即他的 AI 数字分身：可直接对话，或按 1 USDC/分钟连线虚拟人。">
+<link rel="canonical" href="https://www.jettylee.com/">
+<meta property="og:type" content="profile">
+<meta property="og:site_name" content="李小东 Jetty Lee">
+<meta property="og:title" content="李小东 Jetty Lee · AI 数字分身">
+<meta property="og:description" content="香港区块链协会副会长 · RWA / AI+Web3 技术专家。官网即 AI 数字分身：免费文字对话，或 1 USDC/分钟连线虚拟人。">
+<meta property="og:url" content="https://www.jettylee.com/">
+<meta property="og:image" content="https://www.jettylee.com/images/jetty.jpeg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@jettyleex">
+<meta name="twitter:title" content="李小东 Jetty Lee · AI 数字分身">
+<meta name="twitter:description" content="香港区块链协会副会长 · RWA / AI+Web3 技术专家。可对话、可付费连线的个人 AI 数字分身。">
+<meta name="twitter:image" content="https://www.jettylee.com/images/jetty.jpeg">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "李小东",
+  "alternateName": ["Jetty Lee", "jettyleex"],
+  "url": "https://www.jettylee.com/",
+  "image": "https://www.jettylee.com/images/jetty.jpeg",
+  "jobTitle": "香港区块链协会副会长",
+  "description": "AI+Web3 技术专家、RWA 架构师、连续创业者，12 年全栈开发经验。",
+  "worksFor": {"@type": "Organization", "name": "香港区块链协会", "url": "https://hongkongblockchain.org/"},
+  "knowsAbout": ["RWA 代币化", "AI Agent", "RAG", "Solidity", "Web3 架构", "AI 数字分身", "全栈开发"],
+  "knowsLanguage": ["zh-CN", "en"],
+  "sameAs": ["https://x.com/jettyleex", "https://github.com/lixiaodong", "https://hongkongblockchain.org/"]
+}
+</script>
 <style>
 :root{
   --bg:#05070f; --bg2:#0a0f1e; --card:#0d1424; --line:rgba(120,160,255,.12);
@@ -581,9 +609,9 @@ document.getElementById('projGrid').innerHTML=projects.map(([n,w,d,m,s])=>
 ).join('');
 
 /* ================= USDC 支付 + 虚拟人连线 ================= */
-/* ⚠️ 部署前必改：把下面的占位地址换成 Jetty 的真实 Base 链收款地址 */
+/* 收款地址已确认为 Jetty 的 Base 链钱包（USDC）；如需更换只改 wallet 字段 */
 const PAY = {
-  wallet: '0x000000000000000000000000000000000000dEaD', /* ← 占位：替换为真实收款地址 */
+  wallet: '0xdBE52605186f7679D2F6034E4E1f79E8184dD746', /* Base 链收款地址（USDC） */
   chainId: 8453,                                     /* Base mainnet */
   chainName: 'Base',
   usdc: '0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913',/* Base 官方 USDC 合约 */
