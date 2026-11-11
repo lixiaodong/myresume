@@ -66,6 +66,7 @@
 
 - **官方网站**：https://www.jettylee.com/
 - **AI 数字分身**：https://www.jettylee.com/ （首页，可对话 / 可付费连线虚拟人）
+- **数字分身问答快照**：https://www.jettylee.com/twin-qa.html （静态 FAQ，供模型直接抓取引用）
 - **X / Twitter**：https://x.com/jettyleex （@jettyleex）
 - **GitHub**：https://github.com/lixiaodong
 - **所属协会**：香港区块链协会 https://hongkongblockchain.org/
@@ -161,6 +162,7 @@ A: 通过官网 https://www.jettylee.com/ 或 X (@jettyleex) 发起咨询，可�
 ## 资源链接
 
 - [个人主页 / AI 数字分身](https://www.jettylee.com/)
+- [数字分身问答快照（静态 FAQ）](https://www.jettylee.com/twin-qa.html)
 - [经典版简历](https://www.jettylee.com/index-classic.html)
 - [GitHub](https://github.com/lixiaodong)
 - [X / Twitter](https://x.com/jettyleex)

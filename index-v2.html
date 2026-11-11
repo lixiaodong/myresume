@@ -449,7 +449,7 @@ footer .vision{max-width:520px;margin:0 auto 16px;font-size:13px;color:#b9c9ea;b
 
   <footer>
     <div class="vision"><svg class="icn" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color:var(--gold)"><path d="M9 18h6M10 21h4M12 3a6 6 0 0 0-4 10.5c.8.8 1 1.5 1 2.5h6c0-1 .2-1.7 1-2.5A6 6 0 0 0 12 3z"/></svg> 我相信：<b>真实世界资产（RWA）× AI 原生交互 × 链上基础设施</b>，是未来 10 年最确定的技术主线。</div>
-    <div>© 2026 李小东 Jetty Lee · Digital Twin Resume v2</div>
+    <div>© 2026 李小东 Jetty Lee · Digital Twin Resume v2 · <a href="twin-qa.html" style="color:var(--sub);text-decoration:none">问答快照 / Q&amp;A</a></div>
   </footer>
 </div>
 
@@ -615,16 +615,33 @@ const PAY = {
   chainId: 8453,                                     /* Base mainnet */
   chainName: 'Base',
   usdc: '0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913',/* Base 官方 USDC 合约 */
-  rpc: 'https://mainnet.base.org',                   /* 公共 RPC（机密付费节点禁止进前端） */
+  rpcs: [                                            /* 公共 RPC 列表：按顺序回退，避免单点限流 */
+    'https://base-rpc.publicnode.com',
+    'https://mainnet.base.org',
+    'https://1rpc.io/base',
+  ],
   pricePerMin: 1,                                    /* 1 USDC / 分钟 ≈ ¥6 */
-  txMaxAgeSec: 24*3600,                              /* 只接受 24h 内的交易 */
+  txMaxAgeSec: 60*60,                                /* 只接受 60 分钟内的交易（防跨设备重放） */
+  minConf: 1,                                        /* 链上确认数要求 */
 };
 const TRANSFER_SIG = '0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef';
 const liveState = { minutes:0, timer:null, speak:true };
 
-function rpcCall(method, params){
-  return fetch(PAY.rpc,{method:'POST',headers:{'Content-Type':'application/json'},
-    body:JSON.stringify({jsonrpc:'2.0',id:1,method,params})}).then(r=>r.json());
+async function rpcCall(method, params){
+  let lastErr=null;
+  for(const url of PAY.rpcs){
+    try{
+      const ctl=new AbortController(); const t=setTimeout(()=>ctl.abort(),8000);
+      const res=await fetch(url,{method:'POST',headers:{'Content-Type':'application/json'},
+        body:JSON.stringify({jsonrpc:'2.0',id:1,method,params}),signal:ctl.signal});
+      clearTimeout(t);
+      if(!res.ok){lastErr=new Error('HTTP '+res.status);continue;}
+      const j=await res.json();
+      if(j&&j.error){lastErr=new Error(j.error.message||'rpc error');continue;}
+      return j;
+    }catch(e){lastErr=e;}
+  }
+  throw lastErr||new Error('all RPCs failed');
 }
 
 (function(){
@@ -632,6 +649,7 @@ function rpcCall(method, params){
   const addrEl=document.getElementById('payAddr'),amtEl=document.getElementById('payAmount');
   const txInput=document.getElementById('txInput'),verifyBtn=document.getElementById('verifyBtn');
   let minutes=1;
+  let __retryN=0;
   addrEl.textContent=PAY.wallet;
   addrEl.title=PAY.wallet;
 
@@ -671,23 +689,40 @@ function rpcCall(method, params){
       /* 防旧交易：检查区块时间 */
       const r2=await rpcCall('eth_getBlockByNumber',[rcpt.blockNumber,false]);
       const ts=parseInt(r2.result.timestamp,16);
-      if(Date.now()/1000-ts>PAY.txMaxAgeSec){setMsg('该交易超过 24 小时，无法用于本次连线','err');throw 'stop';}
+      if(Date.now()/1000-ts>PAY.txMaxAgeSec){setMsg('该交易超过 60 分钟，已过期。请重新支付后立即提交交易哈希','err');throw 'stop';}
       /* 在 receipt logs 中找 USDC Transfer → 收款地址，金额需 >= 应付 */
+      /* 确认数：防 reorg / 未最终确定的交易 */
+      const r3=await rpcCall('eth_blockNumber',[]);
+      const conf=parseInt(r3.result,16)-parseInt(rcpt.blockNumber,16);
+      if(conf<PAY.minConf){
+        if(__retryN++>=15){setMsg('链上确认超时，请稍后重新点击验证','err');throw 'stop';}
+        setMsg(`等待链上确认（当前 ${conf}/${PAY.minConf}），约 2 秒后自动重试…`);throw 'retry';
+      }
+      /* 在 receipt logs 中找 USDC Transfer → 收款地址，金额需 >= 应付；排除自转 */
       const need=BigInt(minutes*PAY.pricePerMin)*1000000n; /* USDC 6 位精度 */
-      const walletPad='0x000000000000000000000000'+PAY.wallet.slice(2).toLowerCase();
-      const hit=rcpt.logs.find(l=>
+      const pad=a=>'0x'+a.toLowerCase().replace(/^0x/,'').padStart(64,'0');
+      const walletPad=pad(PAY.wallet);
+      const hit=(rcpt.logs||[]).find(l=>
         l.address.toLowerCase()===PAY.usdc.toLowerCase() &&
-        l.topics[0]===TRANSFER_SIG &&
+        (l.topics||[]).length>=3 &&
+        l.topics[0].toLowerCase()===TRANSFER_SIG &&
         l.topics[2].toLowerCase()===walletPad &&
+        l.topics[1].toLowerCase()!==walletPad &&           /* 不是自己转给自己 */
         BigInt(l.data)>=need
       );
       if(!hit){setMsg(`未找到向本地址支付 ≥${minutes*PAY.pricePerMin} USDC 的转账记录，请核对金额与链（Base）`,'err');throw 'stop';}
+      __retryN=0;
       used.push(tx.toLowerCase());localStorage.setItem('jetty_used_tx',JSON.stringify(used));
       setMsg('验证通过，正在接通…','ok');
       setTimeout(()=>{modal.classList.remove('open');startLive(minutes);},900);
     }catch(e){
+      if(e==='retry'){
+        setMsg('等待链上确认中，请勿关闭窗口…');
+        setTimeout(()=>{verifyBtn.disabled=false;verifyBtn.click();},2000);
+        return;
+      }
       if(e!=='stop')setMsg('网络验证失败，请稍后重试（或换用钱包内置浏览器）','err');
-    }finally{verifyBtn.disabled=false;}
+    }finally{ if(!msg.textContent.startsWith('等待链上确认中'))verifyBtn.disabled=false; }
   };
 
   function startLive(min){

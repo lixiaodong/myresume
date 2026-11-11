@@ -27,6 +27,14 @@
     <priority>0.8</priority>
   </url>
 
+  <!-- 数字分身静态问答快照（可被抓取的 FAQ） -->
+  <url>
+    <loc>https://www.jettylee.com/twin-qa.html</loc>
+    <lastmod>2026-11-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
   <!-- LLM-friendly summary (llms.txt) -->
   <url>
     <loc>https://www.jettylee.com/llms.txt</loc>
